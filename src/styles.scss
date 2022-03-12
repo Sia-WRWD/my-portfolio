@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+  --light-slate: #a8b2d1;
+  --slate: #8892b0;
+  --ff-primary:"Manrope", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --spacing: 0.1rem;
+  --typing-primary: white;
+  --secondary: black;
+  --border-blast-primary: orange;
+  --blast-secondary: #0096FF;
+  --section-line: #8892b0;
+  --qmark: #fff;
+}
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$app-primary: mat-palette($mat-indigo);
+$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-theme:   mat-light-theme($app-primary, $app-accent);
+
+// Include the default theme styles.
+@include angular-material-theme($app-theme);
+
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-grey);
+$dark-accent:  mat-palette($mat-cyan, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+.unicorn-dark-theme {
+  @include angular-material-theme($dark-theme);
+  --slate: #fff;
+  --typing-primary: #424242;
+  --secondary: #fff;
+  --border-blast-primary: aqua;
+  --blast-secondary: yellow;
+  --section-line: aqua;
+  --qmark: aqua;
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif; }
+
+.mr-8 {
+    margin-right: 8px;
+}
+
+.flex-stretch {
+    flex: 1 0 auto;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: var(--spacing);
+  text-transform: none;
+  line-height: 1.25;
+  margin-bottom: .75rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: .875rem;
+}
+
+//rubber-band animation
+@keyframes rubberBand {
+  from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, .95, 1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+}

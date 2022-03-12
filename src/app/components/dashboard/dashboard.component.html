@@ -1,0 +1,56 @@
+<div class="grid-container">
+  <mat-grid-list cols="3" rowHeight="525px">
+    <mat-grid-tile colspan="3" rowspan="1">
+      <mat-card class="dashboard-card">
+        <app-intro></app-intro>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="slideTop" id="about" style="scroll-margin: 100px">
+    <mat-grid-list cols="2" rowHeight="860px">
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card">
+          <mat-card-content class="dashboard-card-content">
+            <app-about></app-about>
+            <!-- <div>
+            <button mat-button (click)="openDialog()">Open dialog</button>
+          </div> -->
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="slideTop" id="exp" style="scroll-margin: 100px">
+    <mat-grid-list cols="2" rowHeight="600px">
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card">
+          <mat-card-content class="dashboard-card-content">
+
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="slideTop" id="proj" style="scroll-margin: 100px">
+    <mat-grid-list cols="2" rowHeight="600px">
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card">
+          <mat-card-content class="dashboard-card-content">
+
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="slideTop" id="contact" style="scroll-margin: 100px">
+    <mat-grid-list cols="2" rowHeight="600px">
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-card class="dashboard-card">
+          <mat-card-content class="dashboard-card-content">
+
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
