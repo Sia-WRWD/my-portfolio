@@ -1,0 +1,31 @@
+.section-title {
+    display: flex;
+    font-size: clamp(26px,5vw, 32px);
+    color: inherit;
+    align-items: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 450px;
+        height: 1px;
+        margin-left: 20px;
+        background-color: var(--section-line);
+    }
+    .numeric {
+        color: inherit;
+    }
+    .blast {
+        display: inline-block;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+        color: var(--slate);
+        &:hover {
+            color: var(--blast-secondary);
+            animation-name: rubberBand;
+        }
+    }
+}

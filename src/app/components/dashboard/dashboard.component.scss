@@ -10,6 +10,8 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  background: transparent;
+  //box-shadow: none;
 }
 
 .more-button {
@@ -20,4 +22,19 @@
 
 .dashboard-card-content {
   text-align: center;
+}
+
+.slideTop {
+  animation: slide_up 1.5s ease;
+}
+
+@keyframes slide_up{
+  0%{
+    opacity: 0.2;
+    transform:translateY(120px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,6 +24,9 @@ import { TestDialogComponent } from './components/test-dialog/test-dialog.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { IntroComponent } from './components/dashboard/dashboard-content/intro/intro.component';
 import { AboutComponent } from './components/dashboard/dashboard-content/about/about.component';
+import { WorkExpComponent } from './components/dashboard/dashboard-content/work-exp/work-exp.component';
+import { ProjectsComponent } from './components/dashboard/dashboard-content/projects/projects.component';
+import { ContactsComponent } from './components/dashboard/dashboard-content/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,9 @@ import { AboutComponent } from './components/dashboard/dashboard-content/about/a
     FooterComponent,
     IntroComponent,
     AboutComponent,
+    WorkExpComponent,
+    ProjectsComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,8 @@ import { AboutComponent } from './components/dashboard/dashboard-content/about/a
     MatListModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

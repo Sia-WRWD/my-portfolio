@@ -29,25 +29,68 @@
   }
 }
 
-.s-icon {
-  font-size: 1.5rem;
+.s-icon-l {
+  font-size: 1.6rem;
   margin-right: 3px;
   color: inherit;
-  &:hover {
-    color:aqua;
+  .fa-linkedin-square {
+    height: 1.47rem;
+    width: 1.5rem;
+    &:hover {
+      border-radius: 3px;
+      background: #fff;
+      color: #0077B5;
+    }
+  }
+}
+
+.s-icon-f {
+  font-size: 1.6rem;
+  margin-right: 3px;
+  color: inherit;
+  .fa-facebook-square {
+    height: 1.47rem;
+    width: 1.5rem;
+    &:hover {
+      border-radius: 3px;
+      background: #fff;
+      color: #4267B2;
+    }
   }
 }
 
 .s-icon-i {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-right: 3px;
   color: inherit;
+  .fa-instagram {
+    height: 1.46rem;
+    width: 1.46rem;
+    &:hover {
+      color: #fff;
+      background: linear-gradient(to bottom left, #4f5bd5, #962fbf, #d62976, 	#fa7e1e, 	#feda75);
+      border-radius: 7px;
+    }
+  }
 }
 
 .s-icon-g {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-right: 8px;
   color: inherit;
+  &:hover {
+    color: var(--secondary);
+  }
+  .fa-github {
+    height: 1.4rem;
+    width: 1.4rem;
+    text-align: center;
+    &:hover {
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--secondary);
+    }
+  }
 }
 
 .mobile-icon-container {

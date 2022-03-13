@@ -1,0 +1,147 @@
+.section-title {
+    display: flex;
+    font-size: clamp(26px,5vw, 32px);
+    color: inherit;
+    align-items: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 450px;
+        height: 1px;
+        margin-left: 20px;
+        background-color: var(--section-line);
+    }
+    .numeric {
+        color: inherit;
+    }
+    .blast {
+        display: inline-block;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+        color: var(--slate);
+        &:hover {
+            color: var(--blast-secondary);
+            animation-name: rubberBand;
+        }
+    }
+}
+
+.content-container {
+    margin-top: 15px;
+    .btn-container {
+        position: absolute;
+        left: 75px;
+        .mat-button {
+            color: black;
+            font-weight: 600;
+            background: var(--blast-secondary);
+            letter-spacing: 1px;
+        }
+    }
+    
+    .exp-contents {
+        max-width: 600px;
+        text-align: left;
+        margin-left: 150px;
+        padding-left: 30px;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 355px;
+            left: 175px;
+            border-left: 1px solid var(--section-line);
+        }
+        .job-title-place {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            .link {
+                background-image: linear-gradient(
+                  to right,
+                  var(--secondary),
+                  var(--secondary) 50%,
+                  var(--border-blast-primary) 50%
+                );
+                background-size: 200% 100%;
+                background-position: -100%;
+                display: inline-block;
+                padding: 3px 0;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+                text-decoration: none;
+                font-weight: 600;
+                &::before {
+                  content: '';
+                  background: var(--border-blast-primary);
+                  display: block;
+                  position: absolute;
+                  bottom: 0px;
+                  left: 0;
+                  width: 0;
+                  height: 3px;
+                  transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                  background-position: 0;
+                  &::before {
+                    width: 100%;
+                  }
+                }
+            }
+        }
+        .job-date {
+            color: var(--light-slate);
+            font-size: 1rem;
+        }
+        .job-description {
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 1.05rem;
+            li {
+                margin-bottom: 10px;
+            }
+            .sub-link {
+                background-image: linear-gradient(
+                  to right,
+                  var(--secondary),
+                  var(--secondary) 50%,
+                  var(--border-blast-primary) 50%
+                );
+                background-size: 200% 100%;
+                background-position: -100%;
+                display: inline-block;
+                padding: 3px 0;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+                text-decoration: none;
+                font-weight: 600;
+                &::before {
+                  content: '';
+                  background: var(--border-blast-primary);
+                  display: block;
+                  position: absolute;
+                  bottom: 0px;
+                  left: 0;
+                  width: 0;
+                  height: 3px;
+                  transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                  background-position: 0;
+                  &::before {
+                    width: 100%;
+                  }
+                }
+            }
+        }
+    }
+}

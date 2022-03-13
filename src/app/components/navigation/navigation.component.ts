@@ -60,14 +60,14 @@ export class NavigationComponent {
   directProj() {
     let x = document.querySelector("#proj");
     if (x) {
-      x.scrollIntoView();
+      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
   }
 
   directContact() {
     let x = document.querySelector("#contact");
     if (x) {
-      x.scrollIntoView();
+      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
   }
 
