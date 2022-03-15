@@ -1,54 +1,38 @@
 <div class="grid-container">
-  <mat-grid-list cols="3" rowHeight="525px">
-    <mat-grid-tile colspan="3" rowspan="1">
-      <mat-card class="dashboard-card">
-        <app-intro></app-intro>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <mat-card class="dashboard-card intro">
+    <app-intro></app-intro>
+  </mat-card>
+
   <div class="slideTop" id="about" style="scroll-margin: 100px">
-    <mat-grid-list cols="2" rowHeight="860px">
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mat-card-content class="dashboard-card-content">
-            <app-about></app-about>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <mat-card class="dashboard-card about">
+      <mat-card-content class="dashboard-card-content">
+        <app-about></app-about>
+      </mat-card-content>
+    </mat-card>
   </div>
+
   <div class="slideTop" id="exp" style="scroll-margin: 100px">
-    <mat-grid-list cols="2" rowHeight="500px">
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mat-card-content class="dashboard-card-content">
-            <app-work-exp></app-work-exp>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <mat-card class="dashboard-card exp">
+      <mat-card-content class="dashboard-card-content">
+        <app-work-exp></app-work-exp>
+      </mat-card-content>
+    </mat-card>
   </div>
+
   <div class="slideTop" id="proj" style="scroll-margin: 100px">
-    <mat-grid-list cols="2" rowHeight="600px">
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mat-card-content class="dashboard-card-content">
-            <app-projects></app-projects>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <mat-card class="dashboard-card projects">
+      <mat-card-content class="dashboard-card-content">
+        <app-projects></app-projects>
+      </mat-card-content>
+    </mat-card>
   </div>
+
   <div class="slideTop" id="contact" style="scroll-margin: 100px">
-    <mat-grid-list cols="2" rowHeight="600px">
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mat-card-content class="dashboard-card-content">
-            <app-contacts></app-contacts>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <mat-card class="dashboard-card contact">
+      <mat-card-content class="dashboard-card-content">
+        <app-contacts></app-contacts>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>
 

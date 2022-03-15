@@ -13,8 +13,12 @@
         font-weight: 800;
         font-size: 5rem;
         line-height: 1.25;
+        .no-blast-s {
+          color: var(--border-blast-primary);
+        }
         .no-blast {
           margin-left: 15px;
+          color: var(--border-blast-primary);
         }
         .blast {
           display: inline-block;
@@ -39,7 +43,7 @@
           position: absolute;
           right: 0;
           width: 100%;
-          color: inherit;
+          color: var(--secondary);
           background-color: var(--typing-primary);
           animation: typing 4s steps(12) forwards, caret .7s infinite;
         }

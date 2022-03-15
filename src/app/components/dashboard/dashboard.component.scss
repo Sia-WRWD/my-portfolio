@@ -5,19 +5,30 @@
 }
 
 .dashboard-card {
-  position: absolute;
   top: 15px;
   left: 15px;
   right: 15px;
   bottom: 15px;
   background: transparent;
-  //box-shadow: none;
+  margin-bottom: 50%;
+  height: auto;
 }
 
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+.intro {
+  padding-bottom: 40px;
+}
+
+.exp {
+  padding-bottom: 20px;
+}
+
+.projects {
+  padding-bottom: 30px;
+}
+
+.contact {
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .dashboard-card-content {

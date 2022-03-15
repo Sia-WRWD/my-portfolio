@@ -29,3 +29,77 @@
         }
     }
 }
+
+.project-card-container {
+    display: grid;
+    height: auto;
+    width: auto;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: center;
+    .direct-project {
+        text-decoration: none;
+        .project-card {
+            position: relative;
+            box-shadow: 0 10px 30px -15px rgb(2 12 27 / 70%);
+            border-radius: 25px;
+            padding: 1.5rem 2rem;
+            text-decoration: none;
+            background: var(--secondary);
+            width: 215px;
+            height: 325px;
+            color: var(--primary);
+            .project-icon {
+                text-align: left;
+                position: absolute;
+                border: 3px solid var(--primary);
+                border-radius: 50%;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+                .fa-lightbulb-o {
+                    font-size: 2rem;
+                }
+            }
+            .project-link-icon {
+                text-align: right;
+                margin-bottom: 70px;
+                .fa-github, .fa-external-link {
+                    font-size: 2rem;
+                }
+            }
+            .project-title {
+                text-align: left;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            .project-desc {
+                text-align: justify;
+                font-size: 0.9rem;
+            }
+            .language-used {
+                position: absolute;
+                text-align: left;
+                bottom: 20px;
+                font-size: 0.8rem;
+                word-spacing: 10px;
+            }
+        }
+    }
+}
+
+.direct-project:hover {
+    .project-title {
+        color: aqua;
+    }
+    .project-card {
+        transition: 1s ease-in;
+        top: -10px;
+    }
+    .project-icon {
+        color: yellow;
+    }
+}
