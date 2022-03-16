@@ -14,18 +14,18 @@
         font-size: 5rem;
         line-height: 1.25;
         .no-blast-s {
-          color: var(--border-blast-primary);
+          color: var(--no-blast-color);
         }
         .no-blast {
           margin-left: 15px;
-          color: var(--border-blast-primary);
+          color: var(--no-blast-color);
         }
         .blast {
           display: inline-block;
           animation-duration: 1s;
           animation-fill-mode: both;
           animation-iteration-count: 1;
-          background: linear-gradient(to right, var(--slate) 50%, var(--border-blast-primary) 50%);
+          background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
           background-size: 200%;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -43,30 +43,35 @@
           position: absolute;
           right: 0;
           width: 100%;
-          color: var(--secondary);
+          color: var(--black2white);
           background-color: var(--typing-primary);
-          animation: typing 4s steps(12) forwards, caret .7s infinite;
+          animation: typing 3s steps(12) forwards, caret .7s infinite;
         }
       }
     }
     .rubber2 {
       font-size: 3rem;
-      line-height: 1;
-      font-weight: 600; 
+      line-height: 1.5;
+      font-weight: 600;
+      margin-bottom: 0px; 
       .blast {
         display: inline-block;
         animation-duration: 1s;
         animation-fill-mode: both;
         animation-iteration-count: 1;
-        color: var(--slate);
+        background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.4s ease-out;
          &:hover {
-          color: var(--border-blast-primary);
+          background-position: -100%;
           animation-name: rubberBand;
          }
       }
     }
     .intro-msg {
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 1.1rem;
       line-height: 1.5;
       max-width: 38.5rem;
@@ -74,9 +79,9 @@
       .link {
         background-image: linear-gradient(
           to right,
-          var(--secondary),
-          var(--secondary) 50%,
-          var(--border-blast-primary) 50%
+          var(--black2white),
+          var(--black2white) 50%,
+          var(--accent) 50%
         );
         background-size: 200% 100%;
         background-position: -100%;
@@ -90,7 +95,7 @@
         font-weight: 600;
         &::before {
           content: '';
-          background: var(--border-blast-primary);
+          background: var(--accent);
           display: block;
           position: absolute;
           bottom: 0px;
@@ -132,7 +137,7 @@
           padding: 10px;
           border: 2px solid;
           &:nth-child(2) { //left-side
-              color: var(--blast-secondary);
+              color: var(--accent);
               background: black;
               overflow: hidden;
               z-index: 2;
@@ -151,8 +156,8 @@
           }
         }
       &:hover {
-        color: var(--typing-primary);
-        background: var(--secondary);
+        color: var(--white2black);
+        background: var(--black2white);
       }
     }
 }

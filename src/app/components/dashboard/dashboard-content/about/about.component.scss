@@ -17,6 +17,9 @@
     .numeric {
         color: inherit;
     }
+    .no-blast {
+        color: var(--no-blast-color);
+    }
     .blast {
         display: inline-block;
         animation-duration: 1s;
@@ -24,7 +27,7 @@
         animation-iteration-count: 1;
         color: var(--slate);
         &:hover {
-            color: var(--blast-secondary);
+            color: var(--accent);
             animation-name: rubberBand;
         }
     }
@@ -41,9 +44,9 @@
         .link {
             background-image: linear-gradient(
               to right,
-              var(--secondary),
-              var(--secondary) 50%,
-              var(--border-blast-primary) 50%
+              var(--black2white),
+              var(--black2white) 50%,
+              var(--accent) 50%
             );
             background-size: 200% 100%;
             background-position: -100%;
@@ -57,7 +60,7 @@
             font-weight: 600;
             &::before {
               content: '';
-              background: var(--border-blast-primary);
+              background: var(--accent);
               display: block;
               position: absolute;
               bottom: 0px;
@@ -92,7 +95,6 @@
             margin-top: -10px;
             border-radius: 13px;
             box-shadow: 6px 13px 23px -5px rgb(0 0 0 / 46%);
-            border: 3px solid var(--border-blast-primary);
         }
         .flip-card {
             background-color: transparent;
@@ -107,6 +109,7 @@
                 transition: transform 0.6s;
                 transform-style: preserve-3d;
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                border-radius: 13px;
                 .flip-card-front, .flip-card-back {
                     position: absolute;
                     width: 100%;
@@ -116,7 +119,7 @@
                     border-radius:10px;
                 }
                 .flip-card-front {
-                    background: linear-gradient(to top right, #eb3349, #f45c43);
+                    background: var(--card-gradient);
                     color: var(--qmark);
                     display: flex;
                     justify-content: center;
@@ -125,7 +128,7 @@
                         font-weight: 600;
                         font-size: 4rem;
                         border-radius: 50%;
-                        border: 8px solid var(--qmark);
+                        border: 8px solid var(--wave-border);
                         width: 100px;
                         height: 100px;
                         display: flex;
@@ -141,7 +144,7 @@
                 .flip-card-back {
                     transform: rotateY(180deg);
                     img {
-                        background-image: linear-gradient(to top right, #eecda3, #ef629f);
+                        background-image: var(--card-gradient);
                         border-radius: 10px;
                         width: 250px;
                         height: 300px;

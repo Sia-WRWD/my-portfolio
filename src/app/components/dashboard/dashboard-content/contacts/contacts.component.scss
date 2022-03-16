@@ -3,10 +3,64 @@
     h1 {
         font-size: 2rem;
         font-weight: 600;
+        .no-blast {
+            color: var(--no-blast-color);
+        }
+        .blast {
+            display: inline-block;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: 1;
+            background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 0.4s ease-out;
+        }
+        &:hover {
+            .blast {
+                background-position: -100%;
+            }
+            .b1 {
+                animation: Bounce 1.5s ease infinite;
+            }
+            .b2 {
+                animation: Bounce 1.5s ease infinite .1s;
+            }
+            .b3 {
+                animation: Bounce 1.5s ease infinite .2s;
+            }
+            .b4 {
+                animation: Bounce 1.5s ease infinite .3s;
+            }
+            .b5 {
+                animation: Bounce 1.5s ease infinite .4s;
+            }
+            .b6 {
+                animation: Bounce 1.5s ease infinite .5s;
+            }
+            .b7 {
+                animation: Bounce 1.5s ease infinite .6s;
+            }
+            .b8 {
+                animation: Bounce 1.5s ease infinite .7s;
+            }
+            .b9 {
+                animation: Bounce 1.5s ease infinite .8s;
+            }
+            .b10 {
+                animation: Bounce 1.5s ease infinite .9s;
+            }
+            .b11 {
+                animation: Bounce 1.5s ease infinite .10s;
+            }
+        }
     }
     h2 {
         font-size: 5rem;
         padding: 20px 0;
+        font-weight: 900;
+        color: var(--accent);
     }
     p {
         margin: 10px 100px;
@@ -37,7 +91,7 @@
           padding: 10px;
           border: 2px solid;
           &:nth-child(2) { //left-side
-              color: var(--blast-secondary);
+              color: var(--accent);
               background: black;
               overflow: hidden;
               z-index: 2;
@@ -60,4 +114,20 @@
         background: var(--secondary);
       }
     }
+}
+
+@keyframes Bounce {
+    20%, 50%, 80%, to {
+        transform: translateY(0);
+    } 40% {
+        transform: translateY(-20px);
+    } 70% {
+        transform: translateY(-10px);
+    } 90% {
+        transform: translateY(-2px);
+    }
+}
+
+.blast:hover, .b1 {
+    animation: Bounce 1.5s ease infinite;
 }

@@ -17,6 +17,9 @@
     .numeric {
         color: inherit;
     }
+    .no-blast {
+        color: var(--no-blast-color);
+    }
     .blast {
         display: inline-block;
         animation-duration: 1s;
@@ -24,7 +27,7 @@
         animation-iteration-count: 1;
         color: var(--slate);
         &:hover {
-            color: var(--blast-secondary);
+            color: var(--accent);
             animation-name: rubberBand;
         }
     }
@@ -45,14 +48,14 @@
             border-radius: 25px;
             padding: 1.5rem 2rem;
             text-decoration: none;
-            background: var(--secondary);
+            background: var(--proj-card);
             width: 215px;
             height: 325px;
-            color: var(--primary);
+            color: var(--whiteonly);
             .project-icon {
                 text-align: left;
                 position: absolute;
-                border: 3px solid var(--primary);
+                border: 3px solid var(--whiteonly);
                 border-radius: 50%;
                 width: 2rem;
                 height: 2rem;
@@ -75,10 +78,12 @@
                 font-size: 1.5rem;
                 font-weight: 600;
                 margin-bottom: 20px;
+                letter-spacing: 1px;
             }
             .project-desc {
                 text-align: justify;
                 font-size: 0.9rem;
+                font-weight: 500;
             }
             .language-used {
                 position: absolute;
@@ -86,6 +91,7 @@
                 bottom: 20px;
                 font-size: 0.8rem;
                 word-spacing: 10px;
+                color: var(--lang-used);
             }
         }
     }
@@ -93,13 +99,13 @@
 
 .direct-project:hover {
     .project-title {
-        color: aqua;
+        color: var(--proj-title);
     }
     .project-card {
         transition: 1s ease-in;
         top: -10px;
     }
     .project-icon {
-        color: yellow;
+        color: var(--proj-icon);
     }
 }

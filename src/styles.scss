@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
 :root {
-  --light-slate: #a8b2d1;
-  --slate: #8892b0;
   --ff-primary:"Manrope", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --spacing: 0.1rem;
+  --light-slate: #a8b2d1;
+  --slate: #8892b0;
   --typing-primary: #fafafa;
-  --primary: white;
-  --secondary: black;
-  --border-blast-primary: orange;
-  --blast-secondary: #FC4F4F;
+  --dominant: #FFF;
+  --secondary: #3F51B5; 
+  --accent: #EB5D63;
+  --no-blast-color: #3F51B5;
+  --wave-border: #FFF;
+  --white2black: white;
+  --black2white: black;
+  --whiteonly: white;
+  --card-gradient: linear-gradient(45deg, #3F51B5, #F65D91, #FF886F);
   --section-line: #8892b0;
-  --qmark: #fff;
+  --proj-card: #3F51B5;
+  --proj-icon: #F9F871;
+  --proj-title: aqua;
+  --lang-used: lightgrey;
 }
 
 @import '~@angular/material/theming';
@@ -45,12 +53,19 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   @include angular-material-theme($dark-theme);
   --slate: #fff;
   --typing-primary: #303030;
-  --primary: black;
-  --secondary: #fff;
-  --border-blast-primary: aqua;
-  --blast-secondary: yellow;
+  --dominant: #303030;
+  --secondary: #FFF; 
+  --accent: aqua;
+  --no-blast-color: #9e9e9e;
+  --wave-border: #303030;
+  --white2black: black;
+  --black2white: #fff;
+  --card-gradient: linear-gradient(45deg, #303030, #FFF, aqua);
   --section-line: aqua;
-  --qmark: aqua;
+  --proj-card: #505050;
+  --proj-icon: yellow;
+  --proj-title: cyan;
+  --lang-used: aqua;
 }
 
 /* You can add global styles to this file, and also import other style files */
