@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.page_404 {
+    padding: 40px 0;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: 25px;
+    img {
+        width: 100%;
+    }
+    .four_zero_four_bg {
+        background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        .error-title {
+            font-size: 80px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            .blast {
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-iteration-count: 1;
+                background: linear-gradient(to right, var(--slate) 50%, var(--secondary) 50%);
+                background-size: 200%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: 0.4s ease-out;
+            }
+            &:hover {
+                .blast {
+                    background-position: -100%;
+                    animation-name: rubberBand;
+                }
+            }
+        }
+    }
+    .error-container {
+        text-align: center;
+        .error-content {
+
+            .error-desc {
+                .h2 {
+                    font-size: 1.5rem;
+                }
+                .link_404 {
+                    color: #fff !important;
+                    padding: 10px 20px;
+                    background: var(--accent);
+                    margin: 20px 0;
+                    display: inline-block;
+                    font-weight:bold;
+                    border:2px solid var(--accent);
+                    transition:.3s ease-in-out;
+                    border-radius:4px;
+                    text-transform:uppercase;
+                    &:hover {
+                        text-decoration:none;
+                        border-color: var(--accent);
+                        background:transparent;
+                        color: var(--accent) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px){ //Laptops & Desktop
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){ //Tablets Ipads Protrait Mode
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) { //Low Res Tablets Ipads
+
+}
+
+@media (max-width: 480px) {
+
+}
+

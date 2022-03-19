@@ -21,15 +21,21 @@
       color: var(--no-blast-color);
     }
     .blast {
-        display: inline-block;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-        animation-iteration-count: 1;
-        color: var(--slate);
-        &:hover {
-            color: var(--accent);
-            animation-name: rubberBand;
-        }
+      display: inline-block;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count: 1;
+      background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: 0.4s ease-out;
+    }
+    &:hover {
+      .blast {
+        background-position: -100%;
+        animation-name: rubberBand;
+      }
     }
 }
 
@@ -43,6 +49,9 @@
             font-weight: 600;
             background: var(--secondary);
             letter-spacing: 1px;
+            .fa-cog {
+              font-size: 1.5rem;
+            }
         }
     }
     

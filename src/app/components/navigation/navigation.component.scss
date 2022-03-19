@@ -1,5 +1,5 @@
 .sidenav-container {
-  height: 100%;
+  height: fit-content;
 }
 
 .sidenav {
@@ -11,7 +11,7 @@
 }
 
 .mat-toolbar.mat-primary {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
 }
@@ -22,9 +22,12 @@
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: .5s ease-in-out;
-    &:hover {
-      
+    margin-left: 25px;
+  }
+  &:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+    .title {
+      color: var(--title-hover);
     }
   }
 }
@@ -112,4 +115,27 @@
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 2rem;
+}
+
+::ng-deep mat-card.mat-card.mat-focus-indicator.dashboard-card {
+  box-shadow: none;
+}
+
+::ng-deep .mat-icon-button {
+  z-index: 999;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--title-hover), 
+    0 0 20px var(--title-hover), 
+    0 0 30px var(--title-hover), 
+    0 0 40px var(--title-hover), 
+  }
+  
+  to {
+    text-shadow: 0 0 20px var(--title-hover), 
+    0 0 30px var(--title-hover), 
+    0 0 40px var(--title-hover), 
+  }
 }

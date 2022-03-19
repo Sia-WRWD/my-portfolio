@@ -25,9 +25,15 @@
         animation-duration: 1s;
         animation-fill-mode: both;
         animation-iteration-count: 1;
-        color: var(--slate);
-        &:hover {
-            color: var(--accent);
+        background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.4s ease-out;
+    }
+    &:hover {
+        .blast {
+            background-position: -100%;
             animation-name: rubberBand;
         }
     }
@@ -41,6 +47,7 @@
         max-width: 500px;
         text-align: justify;
         word-break: break-word;
+        margin-left: 16px;
         .link {
             background-image: linear-gradient(
               to right,
@@ -79,7 +86,7 @@
         .language-list {
             columns: 2; 
             letter-spacing: 1px;
-            list-style-image: url(../../../../../assets/pictures/ayaya.png);
+            list-style-image: url(../../../../assets/pictures/ayaya.png);
         }
     }
     .about-pic {

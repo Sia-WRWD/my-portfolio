@@ -1,9 +1,12 @@
 <div class="grid-container">
-  <mat-card class="dashboard-card intro">
-    <app-intro></app-intro>
-  </mat-card>
+  <div id="start" class="intro" style="scroll-margin: 100px">
+    <mat-card class="dashboard-card intro">
+      <app-intro></app-intro>
+    </mat-card>
+  </div>
 
-  <div class="slideTop" id="about" style="scroll-margin: 100px">
+  <div id="about" scrolledTo #scrolledToElement="scrolledTo" [class.reached]="scrolledToElement.reached"
+    style="scroll-margin: 100px">
     <mat-card class="dashboard-card about">
       <mat-card-content class="dashboard-card-content">
         <app-about></app-about>
@@ -11,7 +14,8 @@
     </mat-card>
   </div>
 
-  <div class="slideTop" id="exp" style="scroll-margin: 100px">
+  <div id="exp" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached"
+    style="scroll-margin: 100px">
     <mat-card class="dashboard-card exp">
       <mat-card-content class="dashboard-card-content">
         <app-work-exp></app-work-exp>
@@ -19,7 +23,8 @@
     </mat-card>
   </div>
 
-  <div class="slideTop" id="proj" style="scroll-margin: 100px">
+  <div id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached"
+    style="scroll-margin: 100px">
     <mat-card class="dashboard-card projects">
       <mat-card-content class="dashboard-card-content">
         <app-projects></app-projects>
@@ -27,16 +32,14 @@
     </mat-card>
   </div>
 
-  <div class="slideTop" id="contact" style="scroll-margin: 100px">
+  <div id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached"
+    style="scroll-margin: 100px">
     <mat-card class="dashboard-card contact">
       <mat-card-content class="dashboard-card-content">
         <app-contacts></app-contacts>
       </mat-card-content>
     </mat-card>
   </div>
-</div>
 
-<app-footer></app-footer>
-<!-- <div>
-  <button mat-button (click)="openDialog()">Open dialog</button>
-</div> -->
+  <app-footer></app-footer>
+</div>

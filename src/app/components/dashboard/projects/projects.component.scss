@@ -5,6 +5,7 @@
     align-items: center;
     letter-spacing: 1px;
     font-weight: 600;
+    line-height: 1.25;
     &::after {
         content: "";
         display: block;
@@ -25,9 +26,15 @@
         animation-duration: 1s;
         animation-fill-mode: both;
         animation-iteration-count: 1;
-        color: var(--slate);
-        &:hover {
-            color: var(--accent);
+        background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.4s ease-out;
+    }
+    &:hover {
+        .blast {
+            background-position: -100%;
             animation-name: rubberBand;
         }
     }

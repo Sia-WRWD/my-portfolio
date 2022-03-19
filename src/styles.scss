@@ -21,6 +21,8 @@
   --proj-icon: #F9F871;
   --proj-title: aqua;
   --lang-used: lightgrey;
+  --title-hover: #FFC05C;
+  --slide-top: slide_up 1.5s ease;
 }
 
 @import '~@angular/material/theming';
@@ -66,6 +68,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   --proj-icon: yellow;
   --proj-title: cyan;
   --lang-used: aqua;
+  --title-hover: aqua;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -105,6 +108,10 @@ h4 {
   font-size: .875rem;
 }
 
+.slideTop {
+  animation: var(--slide-top);
+}
+
 //rubber-band animation
 @keyframes rubberBand {
   from {
@@ -133,4 +140,16 @@ h4 {
     to {
       transform: scale3d(1, 1, 1);
     }
+}
+
+//Slide-Up Animation
+@keyframes slide_up{
+  0%{
+    opacity: 0.2;
+    transform:translateY(120px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
