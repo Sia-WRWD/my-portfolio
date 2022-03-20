@@ -228,3 +228,263 @@
 @keyframes caret {
 	50% { color: transparent }
 }
+
+//Responsive
+@media (min-width: 662px) and (max-width: 827px){ //Tablets Ipads Protrait Mode
+  .container {
+    .intro {
+      font-size: 2rem;
+      letter-spacing: 4px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 4.5rem;
+      }
+    }
+    .rubber2 {
+      font-size: 2.5rem;
+    }
+    .intro-msg {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 604px) and (max-width: 661px) { //Low Res Tablets Ipads
+  .container {
+    .intro {
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 4.5rem;
+      }
+    }
+    .rubber2 {
+      font-size: 2.25rem;
+    }
+    .intro-msg {
+      font-size: 1rem;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 572px) and (max-width: 603px) {
+  .container {
+    margin-top: 10px;
+    .intro {
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 4.25rem;
+      }
+    }
+    .rubber2 {
+      font-size: 2rem;
+    }
+    .intro-msg {
+      font-size: 1rem;
+      margin-top: 14px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 551px) and (max-width: 571px) {
+  .container {
+    margin-top: 15px;
+    .intro {
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 4rem;
+      }
+    }
+    .rubber2 {
+      font-size: 1.75rem;
+    }
+    .intro-msg {
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 506px) and (max-width: 550px) {
+  .container {
+    margin-top: 25px;
+    .intro {
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 3.5rem;
+      }
+    }
+    .rubber2 {
+      font-size: 1.5rem;
+    }
+    .intro-msg {
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 505px) {
+  .container {
+    margin-top: 25px;
+    .intro {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 3.5rem;
+      }
+    }
+    .rubber2 {
+      font-size: 1.5rem;
+    }
+    .intro-msg {
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 435px) and (max-width: 480px) {
+  .container {
+    margin-top: 25px;
+    .intro {
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 3.5rem;
+      }
+    }
+    .rubber2 {
+      font-size: 1.5rem;
+    }
+    .intro-msg {
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 394px) and (max-width: 434px) {
+  .container {
+    margin-top: 25px;
+    .intro {
+      font-size: 1.3rem;
+      letter-spacing: 1.5px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 3rem;
+      }
+    }
+    .rubber2 {
+      font-size: 1.3rem;
+    }
+    .intro-msg {
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 393px) {
+  .container {
+    margin-top: 25px;
+    .intro {
+      font-size: 1.15rem;
+      letter-spacing: 1.5px;
+    }
+    .intro-name {
+      .rubber1 {
+        font-size: 2.6rem;
+      }
+    }
+    .rubber2 {
+      font-size: 1.3rem;
+    }
+    .intro-msg {
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .get-in-touch {
+      height: 40px;
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}

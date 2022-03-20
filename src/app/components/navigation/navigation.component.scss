@@ -99,8 +99,11 @@
 .mobile-icon-container {
   text-align: center;
   position: absolute;
-  bottom: 10px;
-  left: 90px;
+  bottom: 0px;
+  background: var(--sidenav-si-bg);
+  padding: 10px 0px 5px 0px;
+  color: #fff;
+  width: 100%;
 }
 
 ::ng-deep .mat-list-item-content {

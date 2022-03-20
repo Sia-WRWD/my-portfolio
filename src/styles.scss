@@ -23,6 +23,7 @@
   --lang-used: lightgrey;
   --title-hover: #FFC05C;
   --slide-top: slide_up 1.5s ease;
+  --sidenav-si-bg: #3F51B5;
 }
 
 @import '~@angular/material/theming';
@@ -69,6 +70,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   --proj-title: cyan;
   --lang-used: aqua;
   --title-hover: aqua;
+  --sidenav-si-bg: #424242;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -152,4 +154,25 @@ h4 {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+//Scroll-Bar Design
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
