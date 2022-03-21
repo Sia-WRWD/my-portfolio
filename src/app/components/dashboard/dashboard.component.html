@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <div id="start" class="intro" style="scroll-margin: 100px">
+  <div id="intro" class="intro" style="scroll-margin: 100px">
     <mat-card class="dashboard-card intro">
       <app-intro></app-intro>
     </mat-card>
@@ -22,6 +22,8 @@
       </mat-card-content>
     </mat-card>
   </div>
+
+  <div scrollToTop #scrolledToShow="scrollToTop"></div>
 
   <div id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached"
     style="scroll-margin: 100px">
@@ -46,4 +48,10 @@
       <app-footer></app-footer>
     </mat-card-content>
   </mat-card>
+</div>
+
+<div id="stt" class="stt-container">
+  <button mat-mini-fab (click)="scrollToTop()" class="btnStt">
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
 </div>

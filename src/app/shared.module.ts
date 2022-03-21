@@ -13,9 +13,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ScrolledToDirectiveModule } from './shared/directives/scrolled-to.directive';
+import { ScrollToTopDirectiveModule } from './shared/directives/scroll-to-top.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   exports: [
     MatGridListModule,
     MatCardModule,
@@ -30,7 +32,8 @@ import { ScrolledToDirectiveModule } from './shared/directives/scrolled-to.direc
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatDialogModule,
-    ScrolledToDirectiveModule
+    ScrolledToDirectiveModule,
+    ScrollToTopDirectiveModule
   ],
   imports: [
 

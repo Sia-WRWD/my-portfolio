@@ -56,6 +56,19 @@
   overflow: hidden !important;
 }
 
+.stt-container {
+  visibility: hidden;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  .btnStt {
+    background-color: var(--secondary);
+    mat-icon {
+      font-weight: 600;
+    }
+  }
+}
+
 //Responsive
 @media (min-width: 931px) and (max-width: 1150px) { 
   .grid-container {

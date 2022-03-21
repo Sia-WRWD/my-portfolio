@@ -34,4 +34,11 @@ export class DashboardComponent implements OnInit {
     }, 3000);
   }
 
+  scrollToTop() {
+    let x = document.querySelector("#intro");
+    if (x) {
+      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+  }
+
 }
