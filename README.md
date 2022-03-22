@@ -46,6 +46,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 13. https://css-tricks.com/css-link-hover-effects/
 14. https://mycolor.space/
 15. https://lenadesign.org/2021/05/18/css-bouncing-text-animation/
-16. https://www.youtube.com/watch?v=HCYteRRGcCM&ab_channel=BaljeetSingh
-17. https://github.com/Prem-minister/helloprem
+16. https://www.youtube.com/watch?v=GvgpzcGcRbQ&ab_channel=KieranVenison
+17. https://www.youtube.com/watch?v=HCYteRRGcCM&ab_channel=BaljeetSingh
+18. https://github.com/Prem-minister/helloprem
 
