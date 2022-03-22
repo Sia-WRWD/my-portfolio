@@ -38,15 +38,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 5. https://codepen.io/chalupagrande/pen/zBaqdR
 6. https://codepen.io/cgatno/pen/GxJvxg
 7. https://codepen.io/raubaca/pen/rxLwPq
-8. https://stackblitz.com/edit/ngx-hide-on-scroll?file=src%2Fapp%2Fapp.component.html
-9. https://www.w3schools.com/howto/howto_css_flip_card.asp
-10. https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/
-11. https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=212121
-12. https://techforluddites.com/replacing-list-bullets-with-images-using-css/
-13. https://css-tricks.com/css-link-hover-effects/
-14. https://mycolor.space/
-15. https://lenadesign.org/2021/05/18/css-bouncing-text-animation/
-16. https://www.youtube.com/watch?v=GvgpzcGcRbQ&ab_channel=KieranVenison
-17. https://www.youtube.com/watch?v=HCYteRRGcCM&ab_channel=BaljeetSingh
-18. https://github.com/Prem-minister/helloprem
+8. https://github.com/Prem-minister/helloprem
+9. https://stackblitz.com/edit/ngx-hide-on-scroll?file=src%2Fapp%2Fapp.component.html
+10. https://www.w3schools.com/howto/howto_css_flip_card.asp
+11. https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/
+12. https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=212121
+13. https://techforluddites.com/replacing-list-bullets-with-images-using-css/
+14. https://css-tricks.com/css-link-hover-effects/
+15. https://mycolor.space/
+16. https://lenadesign.org/2021/05/18/css-bouncing-text-animation/
+17. https://www.youtube.com/watch?v=GvgpzcGcRbQ&ab_channel=KieranVenison
+18. https://www.youtube.com/watch?v=HCYteRRGcCM&ab_channel=BaljeetSingh
 
