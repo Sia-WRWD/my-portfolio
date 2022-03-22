@@ -1,6 +1,6 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5. (Material References Refer Below)
 
 ## Development server
 
@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+##Material References
+1. https://stackoverflow.com/questions/54468705/set-interval-on-an-array-in-angular-project (Guerric P)
+2. https://stackoverflow.com/questions/36101756/angular2-routing-with-hashtag-to-page-anchor (cheese)
+3. https://stackoverflow.com/questions/49820013/javascript-scrollintoview-smooth-scroll-and-offset (Søren D. Ptæus & Raphaël Balet)
+4. https://stackoverflow.com/questions/55777845/how-do-i-check-if-the-user-has-scrolled-down-or-crossed-to-a-particular-eleme (j3ff)
+5. https://codepen.io/chalupagrande/pen/zBaqdR
+6. https://codepen.io/cgatno/pen/GxJvxg
+7. https://codepen.io/raubaca/pen/rxLwPq
+8. https://stackblitz.com/edit/ngx-hide-on-scroll?file=src%2Fapp%2Fapp.component.html
+9. https://www.w3schools.com/howto/howto_css_flip_card.asp
+10. https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/
+11. https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=212121
+12. https://techforluddites.com/replacing-list-bullets-with-images-using-css/
+13. https://css-tricks.com/css-link-hover-effects/
+14. https://mycolor.space/
+15. https://lenadesign.org/2021/05/18/css-bouncing-text-animation/
+16. https://www.youtube.com/watch?v=HCYteRRGcCM&ab_channel=BaljeetSingh
+17. https://github.com/Prem-minister/helloprem
+
