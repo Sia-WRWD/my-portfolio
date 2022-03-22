@@ -190,7 +190,7 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) { //Low Res Tablets Ipads
+@media (min-width: 622px) and (max-width: 767px) { //Low Res Tablets Ipads
   .section-title {
     &::after {
       width: 140px;
@@ -224,7 +224,118 @@
   }
 }
 
-@media (min-width: 412px) and (max-width: 480px) {
+@media (min-width: 554px) and (max-width: 621px) {
+  .section-title {
+    &::after {
+      width: 140px;
+    }
+  }
+
+  .content-container {
+    flex-direction: column;
+    .btn-container {
+      left: 0px;
+      text-align: left;
+      margin-bottom: 20px;
+      .mat-button {
+        &::after {
+          content: "Options";
+          margin-left: 7px;
+        }
+      }
+    }
+
+    .exp-contents {
+      margin-left: 0;
+      padding-left: 0px;
+      &::before {
+        display: none;
+      }
+      .job-title-place {
+        font-size: 1.6rem;
+      }
+      .job-description {
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 553px) {
+  .section-title {
+    &::after {
+      width: 140px;
+    }
+  }
+
+  .content-container {
+    flex-direction: column;
+    .btn-container {
+      left: 0px;
+      text-align: left;
+      margin-bottom: 20px;
+      .mat-button {
+        &::after {
+          content: "Options";
+          margin-left: 7px;
+        }
+      }
+    }
+
+    .exp-contents {
+      margin-left: 0;
+      padding-left: 0px;
+      &::before {
+        display: none;
+      }
+      .job-title-place {
+        font-size: 1.4rem;
+      }
+      .job-description {
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 499px) {
+  .section-title {
+    &::after {
+      width: 140px;
+    }
+  }
+
+  .content-container {
+    flex-direction: column;
+    .btn-container {
+      left: 0px;
+      text-align: left;
+      margin-bottom: 20px;
+      .mat-button {
+        &::after {
+          content: "Options";
+          margin-left: 7px;
+        }
+      }
+    }
+
+    .exp-contents {
+      margin-left: 0;
+      padding-left: 0px;
+      &::before {
+        display: none;
+      }
+      .job-title-place {
+        font-size: 1.3rem;
+      }
+      .job-description {
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 423px) and (max-width: 480px) {
   .section-title {
     &::after {
       width: 100px;
@@ -251,6 +362,12 @@
       &::before {
         display: none;
       }
+      .job-title-place {
+        font-size: 1.1rem;
+      }
+      .job-date {
+        font-size: .9rem;
+      }
       .job-description {
         font-size: .9rem;
       }
@@ -258,7 +375,47 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 411px) {
+@media (min-width: 393px) and (max-width: 422px) {
+  .section-title {
+    &::after {
+      width: 100px;
+    }
+  }
+
+  .content-container {
+    flex-direction: column;
+    .btn-container {
+      left: 0px;
+      text-align: left;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      .mat-button {
+        &::after {
+          content: "Options";
+          margin-left: 7px;
+        }
+      }
+    }
+
+    .exp-contents {
+      margin-left: 0;
+      &::before {
+        display: none;
+      }
+      .job-title-place {
+        font-size: 1rem;
+      }
+      .job-date {
+        font-size: .85rem;
+      }
+      .job-description {
+        font-size: .85rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 362px) and (max-width: 392px) {
   .section-title {
     &::after {
       width: 50px;
@@ -285,8 +442,54 @@
       &::before {
         display: none;
       }
-      .job-description {
+      .job-title-place {
         font-size: .9rem;
+      }
+      .job-date {
+        font-size: .85rem;
+      }
+      .job-description {
+        font-size: .85rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 362px) {
+  .section-title {
+    &::after {
+      width: 50px;
+    }
+  }
+
+  .content-container {
+    flex-direction: column;
+    .btn-container {
+      left: 0px;
+      text-align: left;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      .mat-button {
+        &::after {
+          content: "Options";
+          margin-left: 7px;
+        }
+      }
+    }
+
+    .exp-contents {
+      margin-left: 0;
+      &::before {
+        display: none;
+      }
+      .job-title-place {
+        font-size: .89rem;
+      }
+      .job-date {
+        font-size: .83rem;
+      }
+      .job-description {
+        font-size: .83rem;
       }
     }
   }
