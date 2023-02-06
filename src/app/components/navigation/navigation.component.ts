@@ -2,7 +2,7 @@ import { Component, HostBinding } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
@@ -13,7 +13,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 export class NavigationComponent {
 
   @HostBinding('class') className = '';
-  toggleControl = new FormControl(false);
+  toggleControl = new UntypedFormControl(false);
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
