@@ -4,6 +4,7 @@
 
 .sidenav {
   width: 300px;
+  background: var(--sidenav-si-bg);
 }
 
 .sidenav .mat-toolbar {
@@ -14,15 +15,40 @@
   position: fixed;
   top: 0;
   z-index: 1;
+  background: var(--secondary) !important;
+}
+
+.menu-button {
+  background: transparent !important;
+  color: var(--dominant) !important;
+  display: none;
+}
+
+.nav-bar-container {
+  padding-right: 40px;
+}
+
+.nav-bar-a-list a {
+  text-decoration: none;
+  color: var(--dominant);
+  margin-right: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-shadow: 1px 1px 1px black;
+
+  &:hover {
+    color: var(--accent);
+  }
 }
 
 .glowy-title {
+  text-shadow: 1px 1px 1px black;
   .title {
     color: var(--dominant);
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-left: 25px;
+    transition: 0.3s ease-in-out;
   }
   &:hover {
     animation: glow 1s ease-in-out infinite alternate;
@@ -32,71 +58,8 @@
   }
 }
 
-.s-icon-l {
-  font-size: 1.6rem;
-  margin-right: 3px;
-  color: inherit;
-  .fa-linkedin-square {
-    height: 1.47rem;
-    width: 1.5rem;
-    &:hover {
-      border-radius: 3px;
-      background: #fff;
-      color: #0077B5;
-    }
-  }
-}
-
-.s-icon-f {
-  font-size: 1.6rem;
-  margin-right: 3px;
-  color: inherit;
-  .fa-facebook-square {
-    height: 1.47rem;
-    width: 1.5rem;
-    &:hover {
-      border-radius: 3px;
-      background: #fff;
-      color: #4267B2;
-    }
-  }
-}
-
-.s-icon-i {
-  font-size: 1.6rem;
-  margin-right: 3px;
-  color: inherit;
-  .fa-instagram {
-    height: 1.46rem;
-    width: 1.46rem;
-    &:hover {
-      color: #fff;
-      background: linear-gradient(to bottom left, #4f5bd5, #962fbf, #d62976, 	#fa7e1e, 	#feda75);
-      border-radius: 7px;
-    }
-  }
-}
-
-.s-icon-g {
-  font-size: 1.6rem;
-  margin-right: 8px;
-  color: inherit;
-  &:hover {
-    color: var(--white2black);
-  }
-  .fa-github {
-    height: 1.4rem;
-    width: 1.4rem;
-    text-align: center;
-    &:hover {
-      border-radius: 50%;
-      background: var(--black2white);
-      color: var(--white2black);
-    }
-  }
-}
-
 .mobile-icon-container {
+  display: none;
   text-align: center;
   position: absolute;
   bottom: 0px;
@@ -104,13 +67,17 @@
   padding: 10px 0px 5px 0px;
   color: #fff;
   width: 100%;
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 1px black;
 }
 
 ::ng-deep .mat-list-item-content {
-  color: var(--secondary);
+  color: #ffffff;
   font-weight: 600;
   letter-spacing: 1.5px;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 1px black;
 }
 
 ::ng-deep .sidenav .mat-toolbar {
@@ -118,6 +85,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
 }
 
 ::ng-deep mat-card.mat-card.mat-focus-indicator.dashboard-card {
@@ -126,6 +94,21 @@
 
 ::ng-deep .mat-icon-button {
   z-index: 999;
+}
+
+.theme-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-btn {
+  background: transparent;
+  color: var(--dominant);
+}
+
+::ng-deep .mat-menu-content {
+  padding-right: 8px;
+  background: var(--white2black);
 }
 
 @keyframes glow {
@@ -140,5 +123,23 @@
     text-shadow: 0 0 20px var(--title-hover), 
     0 0 30px var(--title-hover), 
     0 0 40px var(--title-hover), 
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-button {
+    display: block !important;
+  }
+
+  .nav-bar-a-list {
+    display: none !important;
+  }
+
+  .mobile-icon-container {
+    display: block !important;
+  }
+
+  .glowy-title {
+    display: none !important;
   }
 }

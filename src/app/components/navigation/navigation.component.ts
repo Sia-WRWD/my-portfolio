@@ -13,7 +13,12 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 export class NavigationComponent {
 
   @HostBinding('class') className = '';
-  toggleControl = new UntypedFormControl(false);
+  toggleControl = new UntypedFormControl("");
+  themes = [
+    {name: "Light Theme", value: ""},
+    {name: "Dark Theme", value: "Dark Theme"},
+    {name: "Bocchi Theme", value: "Bocchi Theme"}
+  ];
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -26,19 +31,64 @@ export class NavigationComponent {
     ) {}
 
   ngOnInit(): void {
-    this.toggleControl.valueChanges.subscribe(val => {
-      const darkModeClass = 'unicorn-dark-theme';
-      this.className = val ? darkModeClass : '';
-
-      const classes = this.overlayContainer.getContainerElement().classList;
-      if(val) {
-        classes.add(darkModeClass);
-      } else {
-        classes.remove(darkModeClass);
-      }
-    })
+    this.changeTheme();
+    console.log(document.getElementById("intro-img"))
   }
   
+  changeTheme() {
+    this.toggleControl.valueChanges.subscribe(val => {
+      console.log(val);
+      const darkModeClass = 'unicorn-dark-theme';
+      const bocchiThemeClass = 'bocchi-theme';
+      if (val == "") {
+        this.className = "";
+      } else if (val == "Dark Theme") {
+        this.className = darkModeClass;
+      } else {
+        this.className = bocchiThemeClass
+      }
+      console.log(this.className);
+
+      const classes = this.overlayContainer.getContainerElement().classList;
+      if (val == "") {
+        this.className = "";
+        classes.remove(darkModeClass);
+        classes.remove(bocchiThemeClass);
+      } else if (val == "Dark Theme") {
+        classes.add(darkModeClass);
+        classes.remove(bocchiThemeClass);
+      } else {
+        classes.add(bocchiThemeClass);
+        classes.remove(darkModeClass);
+      }
+      
+      this.changeBackgroundImage(val);
+      this.changeOverlayVisibility(val);
+    })
+  }
+
+  changeBackgroundImage(val: string) {
+    var bg = document.getElementById("intro-img");
+
+    if (val == "") {
+      bg.style.backgroundImage = "url('../../../assets/pictures/sky.jpg')"
+    } else if (val == "Dark Theme") {
+      bg.style.backgroundImage = "url('../../../assets/pictures/galaxy.jpg')"
+    } else {
+      bg.style.backgroundImage = "url('../../../assets/pictures/bocchi-intro-bg.gif')"
+    }
+  }
+
+  changeOverlayVisibility(val: string) {
+    var overlay = document.getElementById("dark-overlay");
+
+    if (val == "") {
+      overlay.style.opacity = "0";
+    } else {
+      overlay.style.opacity = "0.4";
+    }
+  }
+
   directAbout() {
     let x = document.querySelector("#about");
     if (x) {
@@ -46,8 +96,15 @@ export class NavigationComponent {
     }
   }
 
-  directExp() {
-    let x = document.querySelector("#exp");
+  directSkills() {
+    let x = document.querySelector("#skills");
+    if (x) {
+      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+  }
+
+  directEdu() {
+    let x = document.querySelector("#edu");
     if (x) {
       x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
@@ -55,6 +112,13 @@ export class NavigationComponent {
 
   directProj() {
     let x = document.querySelector("#proj");
+    if (x) {
+      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+  }
+
+  directExp() {
+    let x = document.querySelector("#exp");
     if (x) {
       x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }

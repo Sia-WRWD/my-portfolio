@@ -1,71 +1,69 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'over'" [opened]="false">
-    <mat-toolbar>Navigations&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></mat-toolbar>
+    <mat-toolbar class="justify-content-center">
+      Sia's Portfolio &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>
+    </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item (click)="directAbout()">&#8544;. About Me</a>
-      <a mat-list-item (click)="directExp()">&#8544;&#8544;. Experience</a>
-      <a mat-list-item (click)="directProj()">&#8544;&#8544;&#8544;. Projects</a>
-      <a mat-list-item (click)="directContact()">&#8544;&#8548;. Contacts</a>
+      <a mat-list-item (click)="directAbout()"> About</a>
+      <a mat-list-item (click)="directSkills()"> Skills</a>
+      <a mat-list-item (click)="directEdu()"> Education</a>
+      <a mat-list-item (click)="directProj()"> Projects</a>
+      <a mat-list-item (click)="directExp()"> Experience</a>
+      <a mat-list-item (click)="directContact()"> Contact</a>
       <a mat-list-item href="../../../assets/RESUME.pdf" download="RESUME.pdf">
         Resume
       </a>
-      <ng-container *ngIf="(isHandset$ | async) === false; else showMobileIcon">
 
-      </ng-container>
-      <ng-template #showMobileIcon>
-        <div class="mobile-icon-container">
-          <a href="https://www.linkedin.com/in/sia-chee-zhen-742240201/" class="s-icon-l">
-            <i class="fa fa-linkedin-square mr-8"></i>
-          </a>
-          <a href="https://www.facebook.com/J3N2411" class="s-icon-f">
-            <i class="fa fa-facebook-square mr-8"></i>
-          </a>
-          <a href="https://www.instagram.com/wrwd_okayge/" class="s-icon-i">
-            <i class="fa fa-instagram mr-8"></i>
-          </a>
-          <a href="https://github.com/Sia-WRWD" class="s-icon-g">
-            <i class="fa fa-github mr-8"></i>
-          </a>
-        </div>
-      </ng-template>
+      <div class="mobile-icon-container">
+        <a href="https://www.linkedin.com/in/sia-chee-zhen-742240201/" class="s-icon-l" target="_blank">
+          <i class="fa fa-linkedin-square mr-8"></i>
+        </a>
+        <a href="https://www.facebook.com/J3N2411" class="s-icon-f" target="_blank">
+          <i class="fa fa-facebook-square mr-8"></i>
+        </a>
+        <a href="https://www.instagram.com/wrwd_haloha/" class="s-icon-i" target="_blank">
+          <i class="fa fa-instagram mr-8"></i>
+        </a>
+        <a href="https://github.com/Sia-WRWD" class="s-icon-g" target="_blank">
+          <i class="fa fa-github mr-8"></i>
+        </a>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" ngxHideOnScroll [propertyUsedToHide]="'transform'"
       [valueWhenHidden]="'translateY(-100%)'" [valueWhenShown]="'translateY(0%)'">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" class="menu-button">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" class="nav-bar-container">
         <div class="glowy-title" title="Sia's Portfolio">
           <a class="title" routerLink="">Sia's Portfolio</a>
         </div>
         <div class="flex-stretch"></div>
-        <ng-container *ngIf="(isHandset$ | async) === true; else showDeskIcon">
-
-        </ng-container>
-        <ng-template #showDeskIcon>
-          <a href="https://www.linkedin.com/in/sia-chee-zhen-742240201/" class="s-icon-l">
-            <i class="fa fa-linkedin-square mr-8"></i>
-          </a>
-          <a href="https://www.facebook.com/J3N2411" class="s-icon-f">
-            <i class="fa fa-facebook-square mr-8"></i>
-          </a>
-          <a href="https://www.instagram.com/wrwd_okayge/" class="s-icon-i">
-            <i class="fa fa-instagram mr-8"></i>
-          </a>
-          <a href="https://github.com/Sia-WRWD" class="s-icon-g">
-            <i class="fa fa-github mr-8"></i>
-          </a>
-        </ng-template>
-        <mat-icon class="mr-8">brightness_5</mat-icon>
-        <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
-        </mat-slide-toggle>
-        <mat-icon>bedtime</mat-icon>
+        <div class="nav-bar-a-list">
+          <a (click)="directAbout()">About</a>
+          <a (click)="directSkills()">Skills</a>
+          <a (click)="directEdu()">Education</a>
+          <a (click)="directProj()">Projects</a>
+          <a (click)="directExp()">Experience</a>
+          <a (click)="directContact()">Contact</a>
+        </div>
+        <button type="button" mat-icon-button [matMenuTriggerFor]="themeMenu" class="theme-btn">
+          <mat-icon aria-label="Select theme" style="text-shadow: 1px 1px 1px black;">format_color_fill</mat-icon>
+        </button>
       </mat-toolbar>
     </mat-toolbar>
     <!--Content-->
     <app-dashboard></app-dashboard>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<mat-menu #themeMenu="matMenu">
+  <mat-radio-group aria-labelledby="theme-radio-group-label" class="theme-radio-group" [formControl]="toggleControl">
+    <mat-radio-button class="example-radio-button" *ngFor="let theme of themes" [value]="theme.value">
+      {{theme.name}}
+    </mat-radio-button>
+  </mat-radio-group>
+</mat-menu>

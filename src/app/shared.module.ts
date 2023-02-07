@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
 import { MatLegacySlideToggleModule as MatSlideToggleModule } from '@angular/material/legacy-slide-toggle';
+import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { ScrolledToDirectiveModule } from './shared/directives/scrolled-to.directive';
@@ -32,6 +33,7 @@ import { ScrollToTopDirectiveModule } from './shared/directives/scroll-to-top.di
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatRadioModule,
     ScrolledToDirectiveModule,
     ScrollToTopDirectiveModule
   ],

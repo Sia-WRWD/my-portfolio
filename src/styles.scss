@@ -8,9 +8,9 @@
   --slate: #8892b0;
   --typing-primary: #fafafa;
   --dominant: #FFF;
-  --secondary: #3F51B5; 
-  --accent: #EB5D63;
-  --no-blast-color: #3F51B5;
+  --secondary: #3F51B5; //#E59BAC
+  --accent: #EB5D63; //#EF5D8A
+  --no-blast-color: #3F51B5; //#E59BAC
   --wave-border: #FFF;
   --white2black: white;
   --black2white: black;
@@ -57,7 +57,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   --slate: #fff;
   --typing-primary: #303030;
   --dominant: #303030;
-  --secondary: #FFF; 
+  --secondary: #9e9e9e; 
   --accent: aqua;
   --no-blast-color: #9e9e9e;
   --wave-border: #303030;
@@ -69,8 +69,29 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   --proj-icon: yellow;
   --proj-title: cyan;
   --lang-used: aqua;
-  --title-hover: aqua;
+  --title-hover: #FFC05C;
   --sidenav-si-bg: #424242;
+}
+
+.bocchi-theme {
+  --typing-primary: #fafafa;
+  --dominant: #FFF;
+  --secondary: #E59BAC;
+  --accent: #EF5D8A;
+  --no-blast-color: #E59BAC;
+  --wave-border: #FFF;
+  --white2black: white;
+  --black2white: black;
+  --whiteonly: white;
+  --card-gradient: linear-gradient(45deg, #3F51B5, #F65D91, #FF886F);
+  --section-line: #8892b0;
+  --proj-card: #E59BAC;
+  --proj-icon: #F9F871;
+  --proj-title: aqua;
+  --lang-used: lightgrey;
+  --title-hover: #FFC05C;
+  --slide-top: slide_up 1.5s ease;
+  --sidenav-si-bg: #E59BAC;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -112,6 +133,25 @@ h4 {
 
 .slideTop {
   animation: var(--slide-top);
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.fadeInOut {
+  animation: fadeInOut 3s linear infinite;
+  opacity: 0;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
 
 //rubber-band animation
@@ -153,6 +193,19 @@ h4 {
   100%{
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+//Fade-in-then-out Animation
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
