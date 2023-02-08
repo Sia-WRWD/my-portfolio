@@ -1,6 +1,174 @@
+.flex-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+
+    .left-content {
+        display: flex;
+        flex: .4;
+        justify-content: center;
+
+        .profile-pic-container {
+            height: 500px;
+            width: 400px;
+
+            .profile-pic {
+                height: 100%;
+                width: 100%;
+                border-radius: 20px;
+                background-position: center;
+                object-fit: cover;
+                background-size: cover;
+                filter: drop-shadow(1px 2px 3px black) grayscale(1);
+                transition: 1s ease-in-out;
+
+                &:hover {
+                    filter: drop-shadow(1px 2px 3px black) saturate(2);
+                }
+            }
+        }
+    }
+
+    .right-content {
+        display: flex;
+        flex: .6;
+        flex-direction: column;
+
+        .about-title {
+
+            .rubber {
+                font-weight: 800;
+                font-size: 3rem;
+                line-height: 1.25;
+                margin-bottom: 10px;
+                filter: drop-shadow(1px 1px 1px black);
+        
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 1px;
+                    width: 27%;
+                    border-bottom: 5px solid var(--accent);
+                }
+
+                .no-blast-s {
+                  color: var(--no-blast-color);
+                }
+        
+                .no-blast {
+                  margin-left: 15px;
+                  color: var(--no-blast-color);
+                }
+        
+                .blast {
+                  display: inline-block;
+                  animation-duration: 1s;
+                  animation-fill-mode: both;
+                  animation-iteration-count: 1;
+                  background: linear-gradient(to right, var(--light-slate) 50%, var(--accent) 50%);
+                  background-size: 200%;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  transition: 0.4s ease-out;
+        
+                  &:hover {
+                    background-position: -100%;
+                    animation-name: rubberBand;
+                  }
+                }
+              }
+        }
+
+        .right-about-content {
+
+            .right-about-content-header {
+                text-shadow: 1px 1px 1px black;
+                font-weight: 600;
+                font-size: 2.1rem;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                color: #ffffff;
+                letter-spacing: 1px;
+            }
+
+            .right-about-content-sub-header {
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: var(--accent);
+                margin-bottom: 8px;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .right-about-content-body {
+                text-align: justify;
+                font-size: 1rem;
+                line-height: 2;
+                margin-bottom: 0;
+                color: #ffffff;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .my-resume {
+                position: relative;
+                display: inline-block;
+                width: 200px;
+                height: 50px;
+                filter: drop-shadow(1px 2px 3px black);
+                margin-top: 20px;
+                margin-right: 35px;
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    color: black;
+                    background: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    letter-spacing: 1px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding: 10px;
+                    border: 2px solid var(--black2white);
+                    &:nth-child(2) { //left-side
+                        color: var(--accent);
+                        background: black;
+                        overflow: hidden;
+                        z-index: 2;
+                        transition: 0.5s;
+                        clip-path: polygon(0% 0%, 31% 0, 61% 50%, 30% 100%, 0% 100%);
+                        border: 2px solid var(--accent);
+                        font-weight: 600;
+                        &:hover { //left-side to right-side
+                            clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
+                        }
+                    }
+                    &:nth-child(1) { //Animation for right-side to left-side
+                        &:hover ~ :nth-child(2) {
+                            clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%);
+                        }
+                    }
+                  }
+                &:hover {
+                  color: var(--typing-primary);
+                  background: var(--secondary);
+                }
+            }
+        }
+    }
+}
+
 .section-title {
     display: flex;
-    font-size: clamp(26px,5vw, 32px);
+    font-size: 30px;
     color: inherit;
     align-items: center;
     letter-spacing: 1px;
@@ -39,131 +207,7 @@
     }
 }
 
-.about-container {
-    display: flex;
-    .about-content {
-        font-size: 1rem;
-        line-height: 1.5;
-        max-width: 500px;
-        text-align: justify;
-        word-break: break-word;
-        margin-left: 16px;
-        .link {
-            background-image: linear-gradient(
-              to right,
-              var(--black2white),
-              var(--black2white) 50%,
-              var(--accent) 50%
-            );
-            background-size: 200% 100%;
-            background-position: -100%;
-            display: inline-block;
-            padding: 3px 0;
-            position: relative;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease-in-out;
-            text-decoration: none;
-            font-weight: 600;
-            &::before {
-              content: '';
-              background: var(--accent);
-              display: block;
-              position: absolute;
-              bottom: 0px;
-              left: 0;
-              width: 0;
-              height: 3px;
-              transition: all 0.3s ease-in-out;
-            }
-            &:hover {
-              background-position: 0;
-              &::before {
-                width: 100%;
-              }
-            }
-        }
-        .language-list {
-            columns: 2; 
-            letter-spacing: 1px;
-            list-style-image: url(../../../../assets/pictures/ayaya.png);
-        }
-    }
-    .about-pic {
-        position: relative;
-        max-width: 300px;
-        margin-left: 80px;
-        .picture-border {
-            max-width: 300px;
-            height: 299px;
-            object-fit: cover;
-            display: block;
-            transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-            margin-top: -10px;
-            border-radius: 13px;
-            box-shadow: 6px 13px 23px -5px rgb(0 0 0 / 46%);
-        }
-        .flip-card {
-            background-color: transparent;
-            width: 250px;
-            height: 300px;
-            perspective: 1000px;
-            .flip-card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                transition: transform 0.6s;
-                transform-style: preserve-3d;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                border-radius: 13px;
-                .flip-card-front, .flip-card-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    border-radius:10px;
-                }
-                .flip-card-front {
-                    background: var(--card-gradient);
-                    color: var(--qmark);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .wave {
-                        font-weight: 600;
-                        font-size: 4rem;
-                        border-radius: 50%;
-                        border: 8px solid var(--wave-border);
-                        width: 100px;
-                        height: 100px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        z-index: 100;
-                        box-shadow: 6px 13px 23px -5px rgb(0 0 0 / 46%);
-                        animation-name: wiggle;
-                        animation-duration: .5s;
-                        animation-iteration-count: infinite;
-                    }
-                }
-                .flip-card-back {
-                    transform: rotateY(180deg);
-                    img {
-                        background-image: var(--card-gradient);
-                        border-radius: 10px;
-                        width: 250px;
-                        height: 300px;
-                    }
-                }
-            }
-        }
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-    }
-}
+
 
 //Wiggle Animation
 @keyframes wiggle {
@@ -185,96 +229,578 @@
 }
 
 //Responsive
-@media (min-width: 700px) and (max-width: 824px) { //Low Res Tablets Ipads
-    .section-title {
-        &::after {
-            width: 300px;
+@media (min-width: 280px) {
+    .flex-container {
+      max-width: 270px !important;
+    }
+  }
+  
+  @media (min-width: 360px) {
+    .flex-container {
+      max-width: 340px !important;
+    }
+  }
+  
+  @media (min-width: 420px) {
+    .flex-container {
+      max-width: 400px !important;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .flex-container {
+      max-width: 540px !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .flex-container {
+      max-width: 720px !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .flex-container {
+      max-width: 960px !important;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .flex-container {
+      max-width: 1140px !important;
+    }
+  }
+  
+  @media (min-width: 1430px) {
+    .flex-container {
+      max-width: 1400px !important;
+    }
+  }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .flex-container {
+        column-gap: 40px;
+    }
+
+    .right-about-content-body {
+        font-size: .9rem !important;
+    }
+
+    .my-resume {
+        width: 175px !important;
+        height: 40px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .flex-container {
+        flex-direction: column !important;
+
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 400px !important;
+        width: 300px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 2.6rem !important;
+    }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 2rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: 1.2rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .9rem !important;
+    }
+
+    .my-resume {
+        width: 150px !important;
+        height: 35px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .flex-container {
+        flex-direction: column !important;
+
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 350px !important;
+        width: 250px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.95rem !important;
+    }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.7rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: 1rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .9rem !important;
+    }
+
+    .my-resume {
+        width: 150px !important;
+        height: 35px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .flex-container {
+        flex-direction: column !important;
+
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 350px !important;
+        width: 250px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.95rem !important;
+    }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.7rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: 1rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .9rem !important;
+    }
+
+    .my-resume {
+        width: 150px !important;
+        height: 35px !important;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 575px) {
+    .flex-container {
+        flex-direction: column !important;
+
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 300px !important;
+        width: 250px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.8rem !important;
+
+        &::before {
+            width: 35% !important;
         }
     }
-    .about-container {
-        flex-direction: column;
-        .about-content {
-            max-width: 625px;
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.6rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: .9rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .7rem !important;
+    }
+
+    .my-resume {
+        width: 125px !important;
+        height: 30px !important;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 419px) {
+    .flex-container {
+        flex-direction: column !important;
+
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 300px !important;
+        width: 250px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.8rem !important;
+
+        &::before {
+            width: 40% !important;
         }
-        .about-pic {
-            margin: auto;
-            margin-top: 30px;
+    }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.7rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: 1rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .8rem !important;
+    }
+
+    .my-resume {
+        width: 150px !important;
+        height: 35px !important;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 359px) {
+    .flex-container {
+        flex-direction: column !important;
+
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 250px !important;
+        width: 200px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.6rem !important;
+
+        &::before {
+            width: 48% !important;
+        }
+    }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.3rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: .8rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .6rem !important;
+    }
+
+    .my-resume {
+        width: 100px !important;
+        height: 25px !important;
+
+        span {
+            font-size: .8rem !important;
         }
     }
 }
 
-@media (min-width: 550px) and (max-width: 699px) {
-    .section-title {
-        &::after {
-            width: 300px;
+@media screen and (min-width: 768px) and (max-width: 912px) and (orientation: portrait) 
+              and (min-height: 1024px) and (max-height: 1368px) {
+    .flex-container {
+        flex-direction: column !important;
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 500px !important;
+        width: 425px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 3rem !important;
+
+        &::before {
+            width: 30% !important;
         }
     }
-    .about-container {
-        flex-direction: column;
-        .about-content {
-            max-width: 500px;
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 2.1rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: 1.3rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: 1rem !important;
+    }
+
+    .my-resume {
+        width: 200px !important;
+        height: 50px !important;
+    }
+}
+
+@media screen and (width: 912px) and (height: 1368px) {
+    .flex-container {
+        flex-direction: column !important;
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 500px !important;
+        width: 425px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 3rem !important;
+
+        &::before {
+            width: 30% !important;
         }
-        .about-pic {
-            margin: auto;
-            margin-top: 30px;
+    }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 2.1rem !important;
+        margin-top: 16px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: 1.7rem !important;
+        margin-bottom: 16px !important;
+    }
+
+    .right-about-content-body {
+        font-size: 1.5rem !important;
+    }
+
+    .my-resume {
+        width: 250px !important;
+        height: 70px !important;
+
+        span {
+            font-size: 1.75rem !important;
         }
     }
 }
 
-@media (min-width: 481px) and (max-width: 549px) {
-    .section-title {
-        &::after {
-            width: 250px;
+@media screen and (min-width: 320px) and (max-width: 414px) and (min-height: 568px) 
+              and (max-height: 740px) and (orientation: portrait) {
+    .flex-container {
+        flex-direction: column !important;
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 225px !important;
+        width: 200px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.8rem !important;
+
+        &::before {
+            width: 40% !important;
         }
     }
-    .about-container {
-        flex-direction: column;
-        .about-content {
-            max-width: 450px;
-        }
-        .about-pic {
-            margin: auto;
-            margin-top: 30px;
-        }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.5rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: .9rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .7rem !important;
+    }
+
+    .my-resume {
+        width: 125px !important;
+        height: 25px !important;
     }
 }
 
+@media screen and (width: 320px) and (height: 658px) {
+    .flex-container {
+        flex-direction: column !important;
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
 
+    .profile-pic-container {
+        height: 225px !important;
+        width: 200px !important;
+        margin-bottom: 1rem;
+    }
 
-@media (min-width: 412px) and (max-width: 480px) {
-    .section-title {
-        &::after {
-            width: 200px;
+    .rubber {
+        font-size: 1.8rem !important;
+
+        &::before {
+            width: 50% !important;
         }
     }
-    .about-container {
-        flex-direction: column;
-        .about-content {
-            max-width: 400px;
-            font-size: .9rem;
-        }
-        .about-pic {
-            margin: auto;
-            margin-top: 30px;
-        }
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.5rem !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: .9rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .6rem !important;
+    }
+
+    .my-resume {
+        width: 125px !important;
+        height: 25px !important;
     }
 }
 
-@media (min-width: 360px) and (max-width: 411px) {
-    .section-title {
-        &::after {
-            width: 140px;
+@media screen and (width: 320px) and (height: 568px) {
+    .flex-container {
+        flex-direction: column !important;
+    }
+    
+    .left-container {
+        flex: 1 !important;
+    }
+
+    .profile-pic-container {
+        height: 200px !important;
+        width: 175px !important;
+        margin-bottom: 1rem;
+    }
+
+    .rubber {
+        font-size: 1.4rem !important;
+
+        &::before {
+            width: 40% !important;
         }
     }
-    .about-container {
-        flex-direction: column;
-        .about-content {
-            max-width: 400px;
-            font-size: .9rem;
-        }
-        .about-pic {
-            margin: auto;
-            margin-top: 30px;
+
+    .right-content {
+        flex: 1 !important;
+    }
+
+    .right-about-content-header {
+        font-size: 1.2rem !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .no-blast {
+        margin-left: 7px !important;
+    }
+
+    .right-about-content-sub-header {
+        font-size: .8rem !important;
+    }
+
+    .right-about-content-body {
+        font-size: .6rem !important;
+    }
+
+    .my-resume {
+        width: 100px !important;
+        height: 20px !important;
+        margin-top: 10px !important;
+
+        span {
+            font-size: 0.8rem !important;
         }
     }
 }

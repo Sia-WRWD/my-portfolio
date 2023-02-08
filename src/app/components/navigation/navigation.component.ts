@@ -68,24 +68,28 @@ export class NavigationComponent {
   }
 
   changeBackgroundImage(val: string) {
-    var bg = document.getElementById("intro-img");
+    var introBg = document.getElementById("intro-img");
+    var aboutBg = document.getElementById("about-img");
 
     if (val == "") {
-      bg.style.backgroundImage = "url('../../../assets/pictures/sky.jpg')"
+      introBg.style.backgroundImage = "url('../../../assets/pictures/intro/sky.jpg')";
+      aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/sunset.jpg')";
     } else if (val == "Dark Theme") {
-      bg.style.backgroundImage = "url('../../../assets/pictures/galaxy.jpg')"
+      introBg.style.backgroundImage = "url('../../../assets/pictures/intro/galaxy.jpg')";
+      aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/night-sky.jpg')";
     } else {
-      bg.style.backgroundImage = "url('../../../assets/pictures/bocchi-intro-bg.gif')"
+      introBg.style.backgroundImage = "url('../../../assets/pictures/intro/bocchi-scared.jpg')";
+      aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/bocchi-happy.png')";
     }
   }
 
   changeOverlayVisibility(val: string) {
-    var overlay = document.getElementById("dark-overlay");
+    var overlay = document.getElementById("intro-dark-overlay");
 
     if (val == "") {
       overlay.style.opacity = "0";
     } else {
-      overlay.style.opacity = "0.4";
+      overlay.style.opacity = "0.5";
     }
   }
 

@@ -1,5 +1,5 @@
 <section id="intro">
-  <div id="dark-overlay"></div>
+  <div id="intro-dark-overlay"></div>
   <div id="intro-img">
     <mat-card class="grid-container intro">
       <app-intro class="flex" style="flex: 1; justify-content: space-around;"></app-intro>
@@ -8,11 +8,12 @@
 </section>
 
 <section id="about" scrolledTo #scrolledToElement="scrolledTo" [class.reached]="scrolledToElement.reached">
-  <mat-card class="grid-container about">
-    <mat-card-content class="dashboard-card-content">
-      <app-about></app-about>
-    </mat-card-content>
-  </mat-card>
+  <div id="about-dark-overlay"></div>
+  <div id="about-img">
+    <mat-card class="grid-container about">
+      <app-about class="flex" style="flex: 1; justify-content: space-around; height: 100vh; align-items: center;"></app-about>
+    </mat-card>
+  </div>
 </section>
 
 <section id="exp" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached">

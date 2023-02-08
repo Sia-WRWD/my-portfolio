@@ -49,4 +49,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 16. https://lenadesign.org/2021/05/18/css-bouncing-text-animation/
 17. https://www.youtube.com/watch?v=GvgpzcGcRbQ&ab_channel=KieranVenison
 18. https://www.youtube.com/watch?v=HCYteRRGcCM&ab_channel=BaljeetSingh
+19. https://css-tricks.com/snippets/css/typewriter-effect/
+20. https://www.npmjs.com/package/vanilla-tilt
+21. https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css
+22.
 
