@@ -1,4 +1,4 @@
-.grid-container {
+.flex-container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -24,6 +24,12 @@
   width: 100%;
 }
 
+.skills {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
 .about {
   display: flex;
   height: 100vh;
@@ -39,7 +45,7 @@
   align-items: center;
 }
 
-#intro-img, #about-img {
+#intro-img, #about-img, #skills-img {
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,6 +58,10 @@
 
 #about-img {
   background-image: url("../../../assets/pictures/about/sunset.jpg");
+}
+
+#skills-img {
+  background-image: url("../../../assets/pictures/skills/coding.jpg");
 }
 
 #intro-dark-overlay {
@@ -139,7 +149,7 @@
 }
 
 @media (min-width: 1430px) {
-  .grid-container {
+  .flex-container {
     max-width: 1400px !important;
   }
 }

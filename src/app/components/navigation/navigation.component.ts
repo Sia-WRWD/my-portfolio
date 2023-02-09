@@ -70,16 +70,20 @@ export class NavigationComponent {
   changeBackgroundImage(val: string) {
     var introBg = document.getElementById("intro-img");
     var aboutBg = document.getElementById("about-img");
+    var skillBg = document.getElementById("skills-img");
 
     if (val == "") {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/sky.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/sunset.jpg')";
+      skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding.jpg')";
     } else if (val == "Dark Theme") {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/galaxy.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/night-sky.jpg')";
+      skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/dark-coding.jpg')";
     } else {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/bocchi-scared.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/bocchi-happy.png')";
+      skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding-anime.jpg')";
     }
   }
 
@@ -90,6 +94,13 @@ export class NavigationComponent {
       overlay.style.opacity = "0";
     } else {
       overlay.style.opacity = "0.5";
+    }
+  }
+
+  directIntro() {
+    let x = document.querySelector("#intro");
+    if (x) {
+      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
   }
 

@@ -1,0 +1,29 @@
+<div class="flex-container">
+    <div class="skills-title notranslate">
+        <h2 class="rubber">
+            <span class="no-blast-s">M</span>
+            <span class="blast">y</span>
+            <span class="no-blast">T</span>
+            <span class="blast">e</span>
+            <span class="blast">c</span>
+            <span class="blast">h</span>
+            <span class="no-blast">S</span>
+            <span class="blast">k</span>
+            <span class="blast">i</span>
+            <span class="blast">l</span>
+            <span class="blast">l</span>
+            <span class="blast">s</span>
+            <span class="blast code-icon">
+                <i class="fa fa-code" style="font-weight: 600;"></i>
+            </span>
+        </h2>
+    </div>
+    <div class="tech-stack-container">
+        <ng-container *ngFor="let skill of skills">
+            <div class="tech-stack-card">
+                <img src="{{skill.langSrc}}" alt="{{skill.langName}}.png">
+                <p>{{skill.langName}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

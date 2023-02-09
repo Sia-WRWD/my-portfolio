@@ -1,7 +1,7 @@
-<section id="intro">
+<section id="intro" style="scroll-margin: 100px;">
   <div id="intro-dark-overlay"></div>
   <div id="intro-img">
-    <mat-card class="grid-container intro">
+    <mat-card class="flex-container intro">
       <app-intro class="flex" style="flex: 1; justify-content: space-around;"></app-intro>
     </mat-card>
   </div>
@@ -10,14 +10,22 @@
 <section id="about" scrolledTo #scrolledToElement="scrolledTo" [class.reached]="scrolledToElement.reached">
   <div id="about-dark-overlay"></div>
   <div id="about-img">
-    <mat-card class="grid-container about">
+    <mat-card class="flex-container about">
       <app-about class="flex" style="flex: 1; justify-content: space-around; height: 100vh; align-items: center;"></app-about>
     </mat-card>
   </div>
 </section>
 
-<section id="exp" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached">
-  <mat-card class="grid-container exp">
+<section id="skills" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached">
+  <div id="skills-img">
+    <mat-card class="flex-container skills">
+      <app-skills class="flex" style="flex: 1; justify-content: space-around; height: auto;"></app-skills>
+    </mat-card>
+  </div>
+</section>
+
+<!-- <section id="exp" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached">
+  <mat-card class="flex-container exp">
     <mat-card-content class="dashboard-card-content">
       <app-work-exp></app-work-exp>
     </mat-card-content>
@@ -27,7 +35,7 @@
 <div scrollToTop #scrolledToShow="scrollToTop"></div>
 
 <section id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached">
-  <mat-card class="grid-container projects">
+  <mat-card class="flex-container projects">
     <mat-card-content class="dashboard-card-content">
       <app-projects></app-projects>
     </mat-card-content>
@@ -35,12 +43,12 @@
 </section>
 
 <section id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached">
-  <mat-card class="grid-container contact">
+  <mat-card class="flex-container contact">
     <mat-card-content class="dashboard-card-content">
       <app-contacts></app-contacts>
     </mat-card-content>
   </mat-card>
-</section>
+</section> -->
 
 <mat-card class="footer">
   <mat-card-content class="dashboard-card-content">

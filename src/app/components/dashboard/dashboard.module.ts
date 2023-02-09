@@ -9,6 +9,8 @@ import { WorkExpComponent } from './work-exp/work-exp.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
+import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
     imports: [
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
         WorkExpComponent,
         ProjectsComponent,
         ContactsComponent,
-        FooterComponent
+        FooterComponent,
+        SkillsComponent,
+        EducationComponent
     ],
     providers: [
 
@@ -34,6 +38,8 @@ import { FooterComponent } from './footer/footer.component';
         ProjectsComponent,
         ContactsComponent,
         FooterComponent,
+        SkillsComponent,
+        EducationComponent
     ]
 })
 export class DashBoardModule {}

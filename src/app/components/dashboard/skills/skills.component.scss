@@ -1,0 +1,244 @@
+.flex-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+
+    .skills-title {
+
+        .rubber {
+            font-weight: 800;
+            font-size: 3rem;
+            margin-top: 10px;
+            line-height: 1.25;
+            margin-bottom: 10px;
+            filter: drop-shadow(1px 1px 1px black);
+
+            .no-blast-s {
+              color: var(--no-blast-color);
+            }
+    
+            .no-blast {
+              margin-left: 15px;
+              color: var(--no-blast-color);
+            }
+    
+            .blast {
+              display: inline-block;
+              animation-duration: 1s;
+              animation-fill-mode: both;
+              animation-iteration-count: 1;
+              background: linear-gradient(to right, var(--light-slate) 50%, var(--accent) 50%);
+              background-size: 200%;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              transition: 0.4s ease-out;
+    
+              &:hover {
+                background-position: -100%;
+                animation-name: rubberBand;
+              }
+            }
+
+            .code-icon {
+                font-weight: 600;
+                margin-left: 1rem;
+            }
+          }
+    }
+
+    .tech-stack-container {
+        width: 100%;
+        height: auto;
+        background: rgb(0, 0,0,0.4);
+        margin-bottom: 20px;
+        border-radius: 25px;
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .tech-stack-card {
+            width: 17%;
+            background: var(--rgb-accent);
+            border-radius: 10px;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 1px 2px 3px black;
+
+            img {
+                height: 45px;
+                filter: drop-shadow(1px 2px 1px black);
+            }
+
+            p {
+                margin: 0;
+                font-weight: 300;
+                font-size: 20px;
+                height: 30px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            &:hover {
+              transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+@media (min-width: 280px) {
+  .rubber {
+    font-size: 1.75rem !important;
+  }
+
+  .tech-stack-card {
+    width: 35% !important;
+
+    img {
+      height: 35px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+  }
+}
+
+@media (min-width: 360px) {
+    .flex-container {
+      max-width: 340px !important;
+    }
+
+    .tech-stack-card {
+      width: 38% !important;
+  
+      img {
+        height: 50px !important;
+      }
+  
+      p {
+        font-size: 18px !important;
+      }
+    }
+
+    .rubber {
+      font-size: 2.3rem !important;
+    }
+  }
+  
+  @media (min-width: 420px) {
+    .flex-container {
+      max-width: 400px !important;
+    }
+
+    .tech-stack-card {
+      width: 38% !important;
+  
+      img {
+        height: 50px !important;
+      }
+  
+      p {
+        font-size: 18px !important;
+      }
+    }
+
+    .rubber {
+      font-size: 3rem !important;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .flex-container {
+      max-width: 540px !important;
+    }
+
+    .tech-stack-card {
+      width: 40% !important;
+  
+      img {
+        height: 50px !important;
+      }
+  
+      p {
+        font-size: 18px !important;
+      }
+    }
+
+    .rubber {
+      font-size: 3rem !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .flex-container {
+      max-width: 720px !important;
+    }
+
+    .tech-stack-card {
+      width: 25% !important;
+  
+      img {
+        height: 50px !important;
+      }
+  
+      p {
+        font-size: 18px !important;
+      }
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .flex-container {
+      max-width: 960px !important;
+    }
+
+    .tech-stack-card {
+      width: 20% !important;
+  
+      img {
+        height: 50px !important;
+      }
+  
+      p {
+        font-size: 18px !important;
+      }
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .flex-container {
+      max-width: 1140px !important;
+    }
+
+    .tech-stack-card {
+      width: 20% !important;
+  
+      img {
+        height: 50px !important;
+      }
+  
+      p {
+        font-size: 18px !important;
+      }
+    }
+  }
+  
+  @media (min-width: 1430px) {
+    .flex-container {
+      max-width: 1400px !important;
+    }
+
+    .tech-stack-card {
+      width: 20% !important;
+    }
+  }
