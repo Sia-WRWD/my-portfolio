@@ -46,7 +46,7 @@
                 line-height: 1.25;
                 margin-bottom: 10px;
                 filter: drop-shadow(1px 1px 1px black);
-        
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -58,31 +58,31 @@
                 }
 
                 .no-blast-s {
-                  color: var(--no-blast-color);
+                    color: var(--no-blast-color);
                 }
-        
+
                 .no-blast {
-                  margin-left: 15px;
-                  color: var(--no-blast-color);
+                    margin-left: 15px;
+                    color: var(--no-blast-color);
                 }
-        
+
                 .blast {
-                  display: inline-block;
-                  animation-duration: 1s;
-                  animation-fill-mode: both;
-                  animation-iteration-count: 1;
-                  background: linear-gradient(to right, var(--light-slate) 50%, var(--accent) 50%);
-                  background-size: 200%;
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  transition: 0.4s ease-out;
-        
-                  &:hover {
-                    background-position: -100%;
-                    animation-name: rubberBand;
-                  }
+                    display: inline-block;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                    animation-iteration-count: 1;
+                    background: linear-gradient(to right, var(--light-slate) 50%, var(--accent) 50%);
+                    background-size: 200%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition: 0.4s ease-out;
+
+                    &:hover {
+                        background-position: -100%;
+                        animation-name: rubberBand;
+                    }
                 }
-              }
+            }
         }
 
         .right-about-content {
@@ -122,6 +122,7 @@
                 filter: drop-shadow(1px 2px 3px black);
                 margin-top: 20px;
                 margin-right: 35px;
+
                 span {
                     position: absolute;
                     top: 0;
@@ -138,7 +139,9 @@
                     font-weight: 600;
                     padding: 10px;
                     border: 2px solid var(--black2white);
-                    &:nth-child(2) { //left-side
+
+                    &:nth-child(2) {
+                        //left-side
                         color: var(--accent);
                         background: black;
                         overflow: hidden;
@@ -147,19 +150,25 @@
                         clip-path: polygon(0% 0%, 31% 0, 61% 50%, 30% 100%, 0% 100%);
                         border: 2px solid var(--accent);
                         font-weight: 600;
-                        &:hover { //left-side to right-side
+
+                        &:hover {
+                            //left-side to right-side
                             clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
                         }
                     }
-                    &:nth-child(1) { //Animation for right-side to left-side
-                        &:hover ~ :nth-child(2) {
+
+                    &:nth-child(1) {
+
+                        //Animation for right-side to left-side
+                        &:hover~ :nth-child(2) {
                             clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%);
                         }
                     }
-                  }
+                }
+
                 &:hover {
-                  color: var(--typing-primary);
-                  background: var(--secondary);
+                    color: var(--typing-primary);
+                    background: var(--secondary);
                 }
             }
         }
@@ -173,6 +182,7 @@
     align-items: center;
     letter-spacing: 1px;
     font-weight: 600;
+
     &::after {
         content: "";
         display: block;
@@ -182,12 +192,15 @@
         margin-left: 20px;
         background-color: var(--section-line);
     }
+
     .numeric {
         color: inherit;
     }
+
     .no-blast {
         color: var(--no-blast-color);
     }
+
     .blast {
         display: inline-block;
         animation-duration: 1s;
@@ -199,6 +212,7 @@
         -webkit-text-fill-color: transparent;
         transition: 0.4s ease-out;
     }
+
     &:hover {
         .blast {
             background-position: -100%;
@@ -212,70 +226,70 @@
 //Wiggle Animation
 @keyframes wiggle {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     25% {
-      transform: rotate(-15deg);
+        transform: rotate(-15deg);
     }
-  
+
     75% {
-      transform: rotate(15deg);
+        transform: rotate(15deg);
     }
-  
+
     100% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
 //Responsive
 @media (min-width: 280px) {
     .flex-container {
-      max-width: 270px !important;
+        max-width: 270px !important;
     }
-  }
-  
-  @media (min-width: 360px) {
+}
+
+@media (min-width: 360px) {
     .flex-container {
-      max-width: 340px !important;
+        max-width: 340px !important;
     }
-  }
-  
-  @media (min-width: 420px) {
+}
+
+@media (min-width: 420px) {
     .flex-container {
-      max-width: 400px !important;
+        max-width: 400px !important;
     }
-  }
-  
-  @media (min-width: 576px) {
+}
+
+@media (min-width: 576px) {
     .flex-container {
-      max-width: 540px !important;
+        max-width: 540px !important;
     }
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .flex-container {
-      max-width: 720px !important;
+        max-width: 720px !important;
     }
-  }
-  
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .flex-container {
-      max-width: 960px !important;
+        max-width: 960px !important;
     }
-  }
-  
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
     .flex-container {
-      max-width: 1140px !important;
+        max-width: 1140px !important;
     }
-  }
-  
-  @media (min-width: 1430px) {
+}
+
+@media (min-width: 1430px) {
     .flex-container {
-      max-width: 1400px !important;
+        max-width: 1400px !important;
     }
-  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .flex-container {
@@ -297,7 +311,7 @@
         flex-direction: column !important;
 
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -339,7 +353,7 @@
         flex-direction: column !important;
 
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -381,7 +395,7 @@
         flex-direction: column !important;
 
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -423,7 +437,7 @@
         flex-direction: column !important;
 
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -469,7 +483,7 @@
         flex-direction: column !important;
 
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -515,7 +529,7 @@
         flex-direction: column !important;
 
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -560,12 +574,11 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 912px) and (orientation: portrait) 
-              and (min-height: 1024px) and (max-height: 1368px) {
+@media screen and (min-width: 768px) and (max-width: 912px) and (orientation: portrait) and (min-height: 1024px) and (max-height: 1368px) {
     .flex-container {
         flex-direction: column !important;
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -610,7 +623,7 @@
     .flex-container {
         flex-direction: column !important;
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -658,12 +671,11 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 414px) and (min-height: 568px) 
-              and (max-height: 740px) and (orientation: portrait) {
+@media screen and (min-width: 320px) and (max-width: 414px) and (min-height: 568px) and (max-height: 740px) and (orientation: portrait) {
     .flex-container {
         flex-direction: column !important;
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -708,7 +720,7 @@
     .flex-container {
         flex-direction: column !important;
     }
-    
+
     .left-container {
         flex: 1 !important;
     }
@@ -753,7 +765,7 @@
     .flex-container {
         flex-direction: column !important;
     }
-    
+
     .left-container {
         flex: 1 !important;
     }

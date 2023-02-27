@@ -1,1 +1,40 @@
-<p>education works!</p>
+<div class="flex-container">
+    <div class="edu-title notranslate">
+        <h2 class="rubber">
+            <span class="no-blast-s">M</span>
+            <span class="blast">y</span>
+            <span class="no-blast">E</span>
+            <span class="blast">d</span>
+            <span class="blast">u</span>
+            <span class="blast">c</span>
+            <span class="blast">a</span>
+            <span class="blast">t</span>
+            <span class="blast">i</span>
+            <span class="blast">o</span>
+            <span class="blast">n</span>
+            <span class="blast code-icon">
+                <i class="fa fa-graduation-cap" style="font-weight: 600;"></i>
+            </span>
+        </h2>
+    </div>
+    <div class="edu-content">
+        <ng-container *ngFor="let educationDetail of educationDetails">
+            <div class="edu-container-card" style="background-image:url({{educationDetail.imgSrc}})">
+                <div class="edu-dark-overlay"></div>
+                <div class="edu-container-card-content">
+                    <h1 class="edu-container-card-course">
+                        {{educationDetail.course}}
+                    </h1>
+                    <h2 class="edu-container-card-name">
+                        <a href="{{educationDetail.url}}" class="underline" target="_blank">
+                            {{educationDetail.name}}
+                        </a>
+                    </h2>
+                    <h3 class="edu-container-card-year-status" style="color: {{educationDetail.statusColor}}">
+                        {{educationDetail.year}} | {{educationDetail.status}}
+                    </h3>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

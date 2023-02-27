@@ -40,6 +40,6 @@ export class SkillsComponent {
   ]
 
   ngOnInit() {
-    console.log(this.skills.length);
+
   }
 }

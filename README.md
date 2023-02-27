@@ -52,5 +52,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 19. https://css-tricks.com/snippets/css/typewriter-effect/
 20. https://www.npmjs.com/package/vanilla-tilt
 21. https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css
-22.
+22. https://stackoverflow.com/questions/40242378/underline-from-left-to-right-on-hover-in-and-out
 

@@ -32,7 +32,6 @@ export class NavigationComponent {
 
   ngOnInit(): void {
     this.changeTheme();
-    console.log(document.getElementById("intro-img"))
   }
   
   changeTheme() {
@@ -71,19 +70,23 @@ export class NavigationComponent {
     var introBg = document.getElementById("intro-img");
     var aboutBg = document.getElementById("about-img");
     var skillBg = document.getElementById("skills-img");
+    var eduBg = document.getElementById("edu-img");
 
     if (val == "") {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/sky.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/sunset.jpg')";
       skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding.jpg')";
+      eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/edu.jpg')";
     } else if (val == "Dark Theme") {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/galaxy.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/night-sky.jpg')";
       skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/dark-coding.jpg')";
+      eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/dark-edu.jpg')";
     } else {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/bocchi-scared.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/bocchi-happy.png')";
       skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding-anime.jpg')";
+      eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/bocchi-edu.png')";
     }
   }
 

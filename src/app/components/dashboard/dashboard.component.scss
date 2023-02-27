@@ -24,6 +24,12 @@
   width: 100%;
 }
 
+.edu {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
 .skills {
   display: flex;
   height: auto;
@@ -45,7 +51,7 @@
   align-items: center;
 }
 
-#intro-img, #about-img, #skills-img {
+#intro-img, #about-img, #skills-img, #edu-img {
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,6 +70,10 @@
   background-image: url("../../../assets/pictures/skills/coding.jpg");
 }
 
+#edu-img {
+  background-image: url("../../../assets/pictures/edu/edu.jpg");
+}
+
 #intro-dark-overlay {
   height: calc(100vh - 64px);
   background: black;   
@@ -73,6 +83,14 @@
 }
 
 #about-dark-overlay {
+  height: 100vh;
+  background: black;   
+  position: absolute;
+  width: 100%;
+  opacity: 0.5;
+}
+
+#edu-dark-overlay {
   height: 100vh;
   background: black;   
   position: absolute;

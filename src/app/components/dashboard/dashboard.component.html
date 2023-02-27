@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<section id="about" scrolledTo #scrolledToElement="scrolledTo" [class.reached]="scrolledToElement.reached">
+<section id="about">
   <div id="about-dark-overlay"></div>
   <div id="about-img">
     <mat-card class="flex-container about">
@@ -16,7 +16,7 @@
   </div>
 </section>
 
-<section id="skills" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached">
+<section id="skills">
   <div id="skills-img">
     <mat-card class="flex-container skills">
       <app-skills class="flex" style="flex: 1; justify-content: space-around; height: auto;"></app-skills>
@@ -24,17 +24,18 @@
   </div>
 </section>
 
-<!-- <section id="exp" scrolledTo #scrolledToElement2="scrolledTo" [class.reached]="scrolledToElement2.reached">
-  <mat-card class="flex-container exp">
-    <mat-card-content class="dashboard-card-content">
-      <app-work-exp></app-work-exp>
-    </mat-card-content>
-  </mat-card>
+<section id="edu">
+  <div id="edu-dark-overlay"></div>
+  <div id="edu-img">
+    <mat-card class="flex-container edu">
+        <app-education class="flex" style="flex: 1; height: 100vh; justify-content: center;"></app-education>
+    </mat-card>
+  </div>
 </section>
 
 <div scrollToTop #scrolledToShow="scrollToTop"></div>
 
-<section id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached">
+<!--<section id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached">
   <mat-card class="flex-container projects">
     <mat-card-content class="dashboard-card-content">
       <app-projects></app-projects>
