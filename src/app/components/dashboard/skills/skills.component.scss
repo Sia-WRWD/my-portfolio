@@ -91,6 +91,7 @@
             &:hover {
               transform: translateY(-10px);
               background: var(--rgb-accent-hover);
+              transition: 0.3s ease-in-out;
             }
         }
     }

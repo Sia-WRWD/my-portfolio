@@ -2,7 +2,7 @@
   <div id="intro-dark-overlay"></div>
   <div id="intro-img">
     <mat-card class="flex-container intro">
-      <app-intro class="flex" style="flex: 1; justify-content: space-around;"></app-intro>
+      <app-intro class="flex" style="flex: 1; justify-content: center;"></app-intro>
     </mat-card>
   </div>
 </section>
@@ -11,7 +11,8 @@
   <div id="about-dark-overlay"></div>
   <div id="about-img">
     <mat-card class="flex-container about">
-      <app-about class="flex" style="flex: 1; justify-content: space-around; height: 100vh; align-items: center;"></app-about>
+      <app-about class="flex"
+        style="flex: 1; justify-content: space-around; height: 100vh; align-items: center;"></app-about>
     </mat-card>
   </div>
 </section>
@@ -28,22 +29,18 @@
   <div id="edu-dark-overlay"></div>
   <div id="edu-img">
     <mat-card class="flex-container edu">
-        <app-education class="flex" style="flex: 1; height: 100vh; justify-content: center;"></app-education>
+      <app-education class="flex" style="flex: 1; height: 100vh; justify-content: center;"></app-education>
     </mat-card>
   </div>
 </section>
 
-<div scrollToTop #scrolledToShow="scrollToTop"></div>
-
-<!--<section id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached">
-  <mat-card class="flex-container projects">
-    <mat-card-content class="dashboard-card-content">
-      <app-projects></app-projects>
-    </mat-card-content>
-  </mat-card>
+<section id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached">
+  <app-projects></app-projects>
 </section>
 
-<section id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached">
+<div scrollToTop #scrolledToShow="scrollToTop"></div>
+
+<!--<section id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached">
   <mat-card class="flex-container contact">
     <mat-card-content class="dashboard-card-content">
       <app-contacts></app-contacts>

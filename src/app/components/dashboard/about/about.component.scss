@@ -6,15 +6,16 @@
     flex: 1;
     flex-direction: row;
     align-items: center;
+    column-gap: 20px;
 
     .left-content {
         display: flex;
         flex: .4;
-        justify-content: center;
+        justify-content: left;
 
         .profile-pic-container {
             height: 500px;
-            width: 400px;
+            width: 100% !important;
 
             .profile-pic {
                 height: 100%;
