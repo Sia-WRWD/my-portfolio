@@ -34,13 +34,22 @@
   </div>
 </section>
 
-<section id="proj" scrolledTo #scrolledToElement3="scrolledTo" [class.reached]="scrolledToElement3.reached">
+<section id="proj">
   <app-projects></app-projects>
+</section>
+
+<section id="exp">
+  <div id="exp-dark-overlay"></div>
+  <div id="exp-img">
+    <div class="exp flex-container">
+      <app-work-exp class="flex" style="flex: 1; height: auto; justify-content: center; align-items: center;"></app-work-exp>
+    </div>
+  </div>
 </section>
 
 <div scrollToTop #scrolledToShow="scrollToTop"></div>
 
-<!--<section id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached">
+<!-- <section id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached">
   <mat-card class="flex-container contact">
     <mat-card-content class="dashboard-card-content">
       <app-contacts></app-contacts>

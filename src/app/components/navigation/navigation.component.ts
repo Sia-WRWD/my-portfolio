@@ -38,7 +38,6 @@ export class NavigationComponent {
 
   changeTheme() {
     this.toggleControl.valueChanges.subscribe(val => {
-      console.log(val);
       const darkModeClass = 'unicorn-dark-theme';
       const bocchiThemeClass = 'bocchi-theme';
       if (val == "") {
@@ -73,22 +72,26 @@ export class NavigationComponent {
     var aboutBg = document.getElementById("about-img");
     var skillBg = document.getElementById("skills-img");
     var eduBg = document.getElementById("edu-img");
+    var expBg = document.getElementById("exp-img");
 
     if (val == "") {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/sky.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/sunset.jpg')";
       skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding.jpg')";
       eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/edu.jpg')";
+      expBg.style.backgroundImage = "url('../../../assets/pictures/exp/exp.jpg')";
     } else if (val == "Dark Theme") {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/galaxy.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/night-sky.jpg')";
       skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/dark-coding.jpg')";
       eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/dark-edu.jpg')";
+      expBg.style.backgroundImage = "url('../../../assets/pictures/exp/dark-exp.jpg')";
     } else {
       introBg.style.backgroundImage = "url('../../../assets/pictures/intro/bocchi-scared.jpg')";
       aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/bocchi-happy.png')";
       skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding-anime.jpg')";
       eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/bocchi-edu.png')";
+      expBg.style.backgroundImage = "url('../../../assets/pictures/exp/bocchi-exp.jpg')";
     }
   }
 

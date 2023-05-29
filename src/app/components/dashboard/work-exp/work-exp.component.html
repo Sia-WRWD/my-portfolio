@@ -1,169 +1,46 @@
-<mat-card-header>
-    <mat-card-title>
-        <h2 class="section-title">
-            <span class="numeric mr-8">&#8544;&#8544;.</span>
-            <span class="no-blast">W</span>
-            <span class="blast">o</span>
-            <span class="blast">r</span>
-            <span class="blast">k</span>
-            &nbsp;
-            <span class="no-blast">E</span>
-            <span class="blast">x</span>
-            <span class="blast">p</span>
-            <span class="blast">e</span>
-            <span class="blast">r</span>
-            <span class="blast">i</span>
-            <span class="blast">e</span>
-            <span class="blast">n</span>
-            <span class="blast">c</span>
-            <span class="blast">e</span>
-        </h2>
-    </mat-card-title>
-</mat-card-header>
-<div class="content-container">
-    <div class="btn-container">
-        <button mat-button [matMenuTriggerFor]="menu"><i class="fa fa-cog" aria-hidden="true"></i></button>
-        <mat-menu #menu="matMenu" yPosition="below">
-            <button mat-menu-item (click)="showExp1()">Freelance</button>
-            <button mat-menu-item (click)="showExp2()">Qube Apps Solution R&D</button>
-            <button mat-menu-item (click)="showExp3()">Blossom House English Centre</button>
-            <button mat-menu-item (click)="showExp4()">Pasar Raya FM</button>
-        </mat-menu>
+<div class="container">
+    <input type="radio" name="slider" id="item-1" (click)="showFreelancer()" checked>
+    <input type="radio" name="slider" id="item-2" (click)="showFusionex()">
+    <input type="radio" name="slider" id="item-3" (click)="showQube()">
+    <input type="radio" name="slider" id="item-4" (click)="showBlossom()">
+    <input type="radio" name="slider" id="item-5" (click)="showFM()">
+    <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+            <img src="{{jobCompanyImg_options[0]}}"
+                alt="song">
+        </label>
+        <label class="card" for="item-2" id="song-2">
+            <img src="{{jobCompanyImg_options[1]}}"
+                alt="song">
+        </label>
+        <label class="card" for="item-3" id="song-3">
+            <img src="{{jobCompanyImg_options[2]}}"
+                alt="song">
+        </label>
+        <label class="card" for="item-4" id="song-4">
+            <img src="{{jobCompanyImg_options[3]}}"
+                alt="song">
+        </label>
+        <label class="card" for="item-5" id="song-5">
+            <img src="{{jobCompanyImg_options[4]}}"
+                alt="song">
+        </label>
     </div>
-
-    <div class="exp-contents">
-        <ng-container *ngIf="exp1_Visible == false; else showContent1">
-            <ng-container *ngIf="exp2_Visible == false; else showContent2">
-                <ng-container *ngIf="exp3_Visible == false; else showContent3">
-                    <ng-container *ngIf="exp4_Visible == false; else showContent4">
-
-                    </ng-container>
-                </ng-container>
-            </ng-container>
-        </ng-container>
-
-        <ng-template #showContent1>
-            <!--Freelancing-->
-            <h1 class="job-title-place">
-                Freelancer @
-                <a class="link" href="https://www.youtube.com/watch?v=NgpfDQPgUTo" target="_blank"> 
-                    Myself
-                </a>
-            </h1>
-            <h2 class="job-date">
-                2021 - Now
-            </h2>
-            <ul class="job-description">
-                <li>
-                    Worked on projects related to Web Development and Assignment-related
-                    projects. The Languages used so far to complete the tasks are 
-                    <a class="sub-link" href="https://www.ni.com/en-my/shop/labview.html" target="_blank">
-                        LabView
-                    </a>
-                    and Angular (which includes HTML, CSS and JS).
-                </li>
-                <li>
-                    From taking up freelancing, I am able to reinforced and apply what I have
-                    learnt so far during my Diploma and Degree classes, simultaneously earning
-                    extra pocket money.
-                </li>
-                <li>
-                    Besides than reinforcing what I have learnt, I am also able to better my Time-Management
-                    skill as I am required to juggle both my schools' assignments and side-projects.
-                </li>
-            </ul>
-        </ng-template>
-
-        <ng-template #showContent2>
-            <!--Qube Apps Solution R&D-->
-            <h1 class="job-title-place">
-                Web Developer @
-                <a class="link" href="https://qubeapps.com/" target="_blank"> 
-                    Qube Apps Solution R&D
-                </a>
-            </h1>
-            <h2 class="job-date">
-                May 2021 - July 2021
-            </h2>
-            <ul class="job-description">
-                <li>
-                    Got the opportunity to learn the JavaScript framework, 
-                    <a class="sub-link" href="https://angular.io/" target="_blank">
-                        Angular 2+
-                    </a>
-                    and its available UI Component Libraries,
-                    <a class="sub-link" href="https://ng.ant.design/docs/introduce/en" target="_blank">
-                        Ant Design of Angular,&#160;
-                    </a>
-                    <a class="sub-link" href="https://material.angular.io/" target="_blank">
-                        Angular Material 
-                    </a>
-                    and etc.
-                </li>
-                <li>
-                    Gained a lot of experience in terms of knowing the ins' and outs' of a 
-                    web developer and picked up many skills during the 3 months internship. 
-                </li>
-                <li>
-                    In addition to that, I also had the opportunity to contribute to one of
-                    the ongoing project which is related to a cashless payment application.
-                </li>
-            </ul>
-        </ng-template>
-
-        <ng-template #showContent3>
-            <!--Blossom House English Centre-->
-            <h1 class="job-title-place">
-                Teacher @
-                <a class="link" href="https://goo.gl/maps/6gG6RqbvRj1ndLB96" target="_blank"> 
-                    Blossom House English Centre
-                </a>
-            </h1>
-            <h2 class="job-date">
-                2019 - 2020
-            </h2>
-            <ul class="job-description">
-                <li>
-                    Worked in two roles which are an English Teacher and Receptionist during
-                    the tenure.
-                </li>
-                <li>
-                    Picked up many skills during the job, such as Customer Service, Teamwork,
-                    Time-Management and Teaching.
-                </li>
-                <li>
-                    Though, this is not Tech-Related, it has allowed me to gain teaching skills
-                    and understanding the importance of patience which is critical in achieving
-                    success in the things I do.
-                </li>
-            </ul>
-        </ng-template>
-
-        <ng-template #showContent4>
-            <!--Pasar Raya FM-->
-            <h1 class="job-title-place">
-                Jack of All Trades @
-                <a class="link" href="https://goo.gl/maps/QiMkNgGuKM5o5M3w7" target="_blank"> 
-                    Pasar Raya FM
-                </a>
-            </h1>
-            <h2 class="job-date">
-                2011 - 2019
-            </h2>
-            <ul class="job-description">
-                <li>
-                    Worked in various roles, from cleaner to shelf-stocker to cashier to 
-                    management and many more.
-                </li>
-                <li>
-                    Picked up many skills during the job, such as Customer Service, Teamwork,
-                    Time-Management, Problem-Solving and People Management.
-                </li>
-                <li>
-                    Even though, it is not Tech-Related, it taught me a lot about being independent,
-                    being responsible for my own actions and the importance of communication.
-                </li>
-            </ul>
-        </ng-template>
+    <div class="player">
+        <div class="upper-part">
+            <div class="info-area" id="test">
+                <label class="song-info" id="song-info-1">
+                    <div class="title">
+                        <span #jobTitle></span> @ <a #jobCompany href="" class="company-link" target="_blank"></a>
+                    </div>
+                    <div class="sub-line">
+                        <span #jobDate class="subtitle"></span>
+                    </div>
+                    <div class="exp-description-container">
+                        ❝ <span #jobDescription class="exp-description"></span> ❞
+                    </div>
+                </label>
+            </div>
+        </div>
     </div>
 </div>
