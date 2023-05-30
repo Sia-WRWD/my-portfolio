@@ -35,14 +35,20 @@
 </section>
 
 <section id="proj">
-  <app-projects></app-projects>
+  <div id="proj-dark-overlay"></div>
+  <div id="proj-img">
+    <div class="proj flex-container">
+      <app-projects class="flex" style="flex: 1; height: auto; justify-content: center; align-items: center; position: relative; padding: 15px; flex-direction: column;"></app-projects>
+    </div>
+  </div>
 </section>
 
 <section id="exp">
   <div id="exp-dark-overlay"></div>
   <div id="exp-img">
     <div class="exp flex-container">
-      <app-work-exp class="flex" style="flex: 1; height: auto; justify-content: center; align-items: center;"></app-work-exp>
+      <app-work-exp class="flex"
+        style="flex: 1; height: auto; justify-content: center; align-items: center;"></app-work-exp>
     </div>
   </div>
 </section>

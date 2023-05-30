@@ -16,30 +16,19 @@
   box-shadow: none;
 }
 
-.contact {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
-
-.edu {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
-
-.skills {
+.skills, .about, .edu, .contact {
   display: flex;
   height: 100vh;
   width: 100%;
   align-items: center;
 }
 
-.about {
+.proj {
   display: flex;
   height: 100vh;
   width: 100%;
   align-items: center;
+  padding: 0 !important;
 }
 
 .intro {
@@ -85,6 +74,10 @@
 
 #exp-img {
   background-image: url("../../../assets/pictures/exp/exp.jpg");
+}
+
+#proj-img {
+  background-image: url("../../../assets/pictures/proj/proj.png");
 }
 
 #intro-dark-overlay {
@@ -183,6 +176,14 @@
 @media (max-width: 991px) {
   .intro {
     align-items: unset !important;
+  }
+
+  .proj {
+    height: auto !important;
+  }
+
+  #proj-dark-overlay {
+    display: none !important;
   }
 }
 

@@ -1,18 +1,31 @@
-<div #carouselWrapper id="carousel-wrapper">
-    <div class="dark-overlay"></div>
-    <div #menu id="menu">
-        <div id="current-option">
-            <div class="text-container">
-                <span #projectTitle data-previous-text="" data-next-text="" class="project-title"></span>
-                <span #projectDate data-previous-text="" data-next-text="" class="project-date"></span>
-                <a #projectUrl href="" class="project-url" target="_blank">
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
+<div class="proj-title notranslate">
+    <h2 class="rubber">
+        <span class="no-blast-s">M</span>
+        <span class="blast">y</span>
+        <span class="no-blast">P</span>
+        <span class="blast">r</span>
+        <span class="blast">o</span>
+        <span class="blast">j</span>
+        <span class="blast">e</span>
+        <span class="blast">c</span>
+        <span class="blast">t</span>
+        <span class="blast">s</span>
+        <span class="blast code-icon">
+            <i class="fa fa-graduation-cap" style="font-weight: 600;"></i>
+        </span>
+    </h2>
+</div>
+<div class="card-grid-container">
+    <ng-container *ngFor="let projectTitle of projectTitle_options; index as i">
+        <div class="project-card">
+            <p class="project-title">{{projectTitle_options[i]}}</p>
+            <p class="project-desc">{{projectDescription_options[i]}}</p>
+            <p class="project-stack">{{projectStack_options[i]}}</p>
+            <div class="project-link">
+                <a href="{{projectUrl_options[i]}}" class="project-github">
+                    <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
             </div>
-            <div class="navigation">
-                <button id="previous-option" (click)="optionPreviousClicked()">&#60;</button>
-                <button id="next-option" (click)="optionNextClicked()">&#62;</button>
-            </div>
         </div>
-    </div>
+    </ng-container>
 </div>

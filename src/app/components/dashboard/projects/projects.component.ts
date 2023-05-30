@@ -1,34 +1,38 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit, AfterViewInit {
+export class ProjectsComponent implements OnInit {
   projectTitle_options = [
+    "Twitter Sentiment Analysis Model",
     "Glove Defect Detection System",
     "Suzume",
     "AGoogTrans",
     "CSS Components",
-    "Image Colour Detection",
-    "Baby Ghost Melbhack"
   ];
-  projectDate_options = [
-    "28 May 2023",
-    "28 May 2023",
-    "25 February 2023",
-    "2 January 2023",
-    "14 August 2022",
-    "23 April 2022"
+  projectDescription_options = [
+    "A machine learning model for determining the sentiment of a tweet, if it is positive or negative.",
+    "A system for detecting defects in different types of gloves (including silicone, medical & cloth).",
+    "An E-commerce website that sells many different anime goodies with the admin, seller and customer roles.",
+    "An Angular Translation Widget that incorporates Google Translator for translation of the entire website.",
+    "A repository with different interesting CSS components or projects that are made for fun and with love."
+  ];
+  projectStack_options = [
+    "Python",
+    "MatLab",
+    "Java HTML CSS JS",
+    "Angular TypeScript",
+    "HTML CSS JS"
   ];
   projectUrl_options = [
+    "https://github.com/Sia-WRWD/TXSA-Twitter-Sentiment-Analysis",
     "https://github.com/Sia-WRWD/Glove-Defect-Detection-System",
     "https://github.com/Sia-WRWD/Suzume",
     "https://github.com/Sia-WRWD/AGoogTrans",
-    "https://github.com/Sia-WRWD/css-components",
-    "https://github.com/Sia-WRWD/image-colour-detection",
-    "https://github.com/Sia-WRWD/Baby-Ghost-MelbHack"
+    "https://github.com/Sia-WRWD/css-components"
   ];
   image_options = [
     "https://imageio.forbes.com/specials-images/imageserve//62a0766c23ae4e5bfd39aea1/0x0.jpg?format=jpg&width=1200",
@@ -39,70 +43,8 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     "https://img.rgstatic.com/content/show/0a360a01-a582-4a30-aba1-af6c5220c1a2/backdrop-1920.jpg"
   ];
 
-  i = 0;
-  intervalId: any;
-  @ViewChild("projectTitle", { static: false }) projectTitle!: ElementRef;
-  @ViewChild("projectDate", { static: false }) projectDate!: ElementRef;
-  @ViewChild("projectUrl", {static: false}) projectUrl!: ElementRef;
-  @ViewChild("carouselWrapper", { static: false }) carousel!: ElementRef;
-  @ViewChild("menu", { static: false }) mainMenu!: ElementRef;
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
-    this.startCarousel();
-  }
-
-  startCarousel(): void {
-    this.intervalId = setInterval(() => {
-      this.optionNextClicked();
-    }, 5000); // Change the interval duration as per your preference
-  }
-
-  stopCarousel(): void {
-    clearInterval(this.intervalId);
-  }
-
-  optionNextClicked(): void {
-    this.i = (this.i + 1) % this.projectTitle_options.length;
-    this.projectTitle.nativeElement.dataset.nextText = this.projectTitle_options[this.i];
-    this.projectDate.nativeElement.dataset.nextText = this.projectDate_options[this.i];
-    this.mainMenu.nativeElement.style.backgroundImage = this.image_options[this.i];
-    this.projectUrl.nativeElement.href = this.projectUrl_options[this.i];
-    this.carousel.nativeElement.classList.add("anim-next");
-
-    setTimeout(() => {
-      this.mainMenu.nativeElement.style.backgroundImage = `url(${this.image_options[this.i]})`;
-    }, 455);
-
-    setTimeout(() => {
-      this.projectTitle.nativeElement.innerText = this.projectTitle_options[this.i];
-      this.projectDate.nativeElement.innerText = this.projectDate_options[this.i];
-      this.projectUrl.nativeElement.href = this.projectUrl_options[this.i];
-      this.carousel.nativeElement.classList.remove("anim-next");
-    }, 650);
-  }
-
-  optionPreviousClicked(): void {
-    this.i = (this.i === 0 ? this.projectTitle_options.length : this.i) - 1;
-    this.projectTitle.nativeElement.dataset.previousText = this.projectTitle_options[this.i];
-    this.projectDate.nativeElement.dataset.previousText = this.projectDate_options[this.i];
-    this.mainMenu.nativeElement.style.backgroundImage = this.image_options[this.i];
-    this.projectUrl.nativeElement.href = this.projectUrl_options[this.i];
-    this.carousel.nativeElement.classList.add("anim-previous");
-
-    setTimeout(() => {
-      this.mainMenu.nativeElement.style.backgroundImage = `url(${this.image_options[this.i]})`;
-    }, 455);
-
-    setTimeout(() => {
-      this.projectTitle.nativeElement.innerText = this.projectTitle_options[this.i];
-      this.projectDate.nativeElement.innerText = this.projectDate_options[this.i];
-      this.projectUrl.nativeElement.href = this.projectUrl_options[this.i];
-      this.carousel.nativeElement.classList.remove("anim-previous");
-    }, 650);
   }
 }
