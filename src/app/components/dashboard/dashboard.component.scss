@@ -16,14 +16,14 @@
   box-shadow: none;
 }
 
-.skills, .about, .edu, .contact {
+.skills, .about, .edu {
   display: flex;
   height: 100vh;
   width: 100%;
   align-items: center;
 }
 
-.proj {
+.proj, .contact {
   display: flex;
   height: 100vh;
   width: 100%;
@@ -49,7 +49,7 @@
   padding: 0 !important;
 }
 
-#intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img {
+#intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -80,6 +80,10 @@
   background-image: url("../../../assets/pictures/proj/proj.png");
 }
 
+#contact-img {
+  background-image: url("../../../assets/pictures/proj/proj.png");
+}
+
 #intro-dark-overlay {
   height: calc(100vh - 64px);
   background: black;   
@@ -89,7 +93,8 @@
 }
 
 #about-dark-overlay, #edu-dark-overlay,
-#proj-dark-overlay, #exp-dark-overlay {
+#proj-dark-overlay, #exp-dark-overlay,
+#contact-dark-overlay {
   height: 100vh;
   background: black;   
   position: absolute;
@@ -178,11 +183,11 @@
     align-items: unset !important;
   }
 
-  .proj {
+  .proj, .contact {
     height: auto !important;
   }
 
-  #proj-dark-overlay {
+  #proj-dark-overlay, #contact-dark-overlay {
     display: none !important;
   }
 }
@@ -195,5 +200,15 @@
 
   #intro-dark-overlay {
     height: calc(100vh - 54px) !important;
+  }
+}
+
+@media (width: 1024px) and (height: 600px) {
+  .proj, .contact {
+    height: 100% !important;
+  }
+
+  #proj-dark-overlay, #contact-dark-overlay {
+    display: none !important;
   }
 }

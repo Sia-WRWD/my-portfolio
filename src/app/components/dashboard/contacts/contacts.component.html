@@ -1,37 +1,35 @@
 <div class="contact-container">
-  <h1>
-    &#8544;&#8548;.
-    <span class="no-blast">S</span>
-    <span class="blast b1">o</span>
-    <span class="blast b2">,</span>
-    &#160;
-    <span class="no-blast">W</span>
-    <span class="blast b3">h</span>
-    <span class="blast b4">a</span>
-    <span class="blast b5">t</span>
-    <span class="blast b6">'</span>
-    <span class="blast b7">s</span>
-    &#160;
-    <span class="no-blast">N</span>
-    <span class="blast b8">e</span>
-    <span class="blast b9">x</span>
-    <span class="blast b10">t</span>
-    <span class="blast b11">?</span>
-  </h1>
-  <h2>
-    Get in Touch
-  </h2>
-  <p>I'm currently looking for any new opportunities, my inbox is always open for anything.
-    Whether you got a question or just want to say hi, I'll try my best to reply as soon as
-    possible.
-  </p>
-
-  <a mat-raised-button href="mailto:cheezhensia24@gmail.com" target="_blank" class="get-in-touch">
-    <span>
-      <mat-icon style="margin-right: 5px;">email</mat-icon> Say Hi :)
-    </span>
-    <span>
-      <mat-icon style="margin-right: 5px;">email</mat-icon> Say Hi :)
-    </span>
-  </a>
+  <div class="contact-card">
+    <div class="contact-heading">
+      <h1 class="title">Get in Touch!</h1>
+      <p class="subtitles">Reach out to me for any inquiries or assistance. I am here to help!</p>
+    </div>
+    <div class="contact-methods">
+      <div class="location">
+        <i class="fa fa-map-marker"></i><br/>
+        <span class="contact-methods-text">Klang, Selangor</span>
+      </div>
+      <div class="email">
+        <i class="fa fa-envelope"></i><br/>
+        <span class="contact-methods-text">cheezhensia24@gmail.com</span>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form [formGroup]="contactFormData" (ngSubmit)="onSubmit(contactFormData.value)">
+        <div class="form-group">
+          <label for="Email">Email</label><br/>
+          <input type="email" class="form-control" name="email" placeholder="Your Email" formControlName="Email" /><br/>
+        </div>
+        <div class="form-group">
+          <label for="Name">Name</label><br/>
+          <input type="text" class="form-control" name="name" placeholder="Your Name" formControlName="Name" />
+        </div>
+        <div class="form-group">
+          <label for="Message">Message</label><br/>
+          <textarea class="form-control" formControlName="Message" name="Message"></textarea>
+        </div>
+        <button type="submit" class="btn-submit" [disabled]="!contactFormData.valid">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>

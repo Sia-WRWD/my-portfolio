@@ -38,7 +38,8 @@
   <div id="proj-dark-overlay"></div>
   <div id="proj-img">
     <div class="proj flex-container">
-      <app-projects class="flex" style="flex: 1; height: auto; justify-content: center; align-items: center; position: relative; padding: 15px; flex-direction: column;"></app-projects>
+      <app-projects class="flex"
+        style="flex: 1; height: auto; justify-content: center; align-items: center; position: relative; padding: 15px; flex-direction: column;"></app-projects>
     </div>
   </div>
 </section>
@@ -53,15 +54,17 @@
   </div>
 </section>
 
-<div scrollToTop #scrolledToShow="scrollToTop"></div>
+<section id="contact">
+  <div id="contact-dark-overlay"></div>
+  <div id="contact-img">
+    <div class="contact flex-container">
+      <app-contacts class="flex"
+        style="flex: 1; height: auto; justify-content: center; align-items: center; padding: 15px;"></app-contacts>
+    </div>
+  </div>
+</section>
 
-<!-- <section id="contact" scrolledTo #scrolledToElement4="scrolledTo" [class.reached]="scrolledToElement4.reached">
-  <mat-card class="flex-container contact">
-    <mat-card-content class="dashboard-card-content">
-      <app-contacts></app-contacts>
-    </mat-card-content>
-  </mat-card>
-</section> -->
+<div scrollToTop #scrolledToShow="scrollToTop"></div>
 
 <mat-card class="footer">
   <mat-card-content class="dashboard-card-content">

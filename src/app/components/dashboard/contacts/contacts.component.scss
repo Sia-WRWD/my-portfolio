@@ -1,186 +1,228 @@
 .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.contact-card {
+    padding: 40px;
+    background: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    height: auto;
+    width: 70%;
+    text-shadow: 1px 2px 3px black;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.contact-heading {
+    width: 100%;
     text-align: center;
-    h1 {
-        font-size: 2rem;
-        font-weight: 600;
-        .no-blast {
-            color: var(--no-blast-color);
-        }
-        .blast {
-            display: inline-block;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-iteration-count: 1;
-            background: linear-gradient(to right, var(--slate) 50%, var(--accent) 50%);
-            background-size: 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: 0.4s ease-out;
-        }
-        &:hover {
-            .blast {
-                background-position: -100%;
-            }
-            .b1 {
-                animation: Bounce 1.5s ease infinite;
-            }
-            .b2 {
-                animation: Bounce 1.5s ease infinite .1s;
-            }
-            .b3 {
-                animation: Bounce 1.5s ease infinite .2s;
-            }
-            .b4 {
-                animation: Bounce 1.5s ease infinite .3s;
-            }
-            .b5 {
-                animation: Bounce 1.5s ease infinite .4s;
-            }
-            .b6 {
-                animation: Bounce 1.5s ease infinite .5s;
-            }
-            .b7 {
-                animation: Bounce 1.5s ease infinite .6s;
-            }
-            .b8 {
-                animation: Bounce 1.5s ease infinite .7s;
-            }
-            .b9 {
-                animation: Bounce 1.5s ease infinite .8s;
-            }
-            .b10 {
-                animation: Bounce 1.5s ease infinite .9s;
-            }
-            .b11 {
-                animation: Bounce 1.5s ease infinite .10s;
-            }
-        }
-    }
-    h2 {
-        font-size: 5rem;
-        padding: 20px 0;
-        font-weight: 900;
+
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 1px;
         color: var(--accent);
+        transition: 0.3s ease-in-out;
+        margin: 0;
     }
-    p {
-        margin: 10px 100px;
-        line-height: 1.5;
-        font-size: 1.1rem;
-    }
-    .get-in-touch {
-        position: relative;
-        display: inline-block;
-        width: 200px;
-        height: 50px;
-        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+
+    .subtitles {
+        font-size: 18px;
         margin-top: 20px;
-        margin-right: 35px;
-        span {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          color: black;
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          letter-spacing: 1px;
-          font-size: 18px;
-          font-weight: 600;
-          padding: 10px;
-          border: 2px solid;
-          &:nth-child(2) { //left-side
-              color: var(--accent);
-              background: black;
-              overflow: hidden;
-              z-index: 2;
-              transition: 0.5s;
-              clip-path: polygon(0% 0%, 31% 0, 61% 50%, 30% 100%, 0% 100%);
-              border: 2px solid var(--section-line);
-              font-weight: 600;
-              &:hover { //left-side to right-side
-                  clip-path: polygon(0% 0%, 100% 0, 100% 53%, 100% 100%, 0% 100%);
-              }
-          }
-          &:nth-child(1) { //Animation for right-side to left-side
-              &:hover ~ :nth-child(2) {
-                  clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%);
-              }
-          }
-        }
-      &:hover {
-        color: var(--typing-primary);
-        background: var(--secondary);
-      }
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        color: var(--light-slate);
+        line-height: 1.5;
+        filter: drop-shadow(1px 2px 3px black);
     }
 }
 
-@keyframes Bounce {
-    20%, 50%, 80%, to {
-        transform: translateY(0);
-    } 40% {
-        transform: translateY(-20px);
-    } 70% {
-        transform: translateY(-10px);
-    } 90% {
-        transform: translateY(-2px);
+.contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-bottom: 20px;
+    grid-gap: 20px;
+}
+
+.location,
+.email {
+    padding: 15px;
+    background: var(--proj-card);
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px black;
+    color: var(--whiteonly);
+}
+
+.fa {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.contact-methods-text {
+    font-size: 16px;
+    word-break: break-all;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--whiteonly);
+    letter-spacing: 2px;
+}
+
+input {
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0;
+    background: rgb(255, 255, 255, 0.3);
+    color: var(--white2black);
+    box-shadow: 1px 2px 3px black;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
     }
 }
 
-.blast:hover, .b1 {
-    animation: Bounce 1.5s ease infinite;
+::placeholder {
+    color: var(--whiteonly);
 }
 
-//Responsive
-@media (min-width: 481px) and (max-width: 767px) { //Low Res Tablets Ipads
-    .contact-container {
-        h2 {
-            font-size: 3rem;
-        }
-        p{
-            margin: 10px 10px;
-            line-height: 1.5;
-            font-size: 1rem;
-        }
-        .get-in-touch {
-            margin-right: 30px;
-        }
+textarea {
+    margin-top: 5px;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0;
+    background: rgb(255, 255, 255, 0.3);
+    color: var(--white2black);
+    box-shadow: 1px 2px 3px black;
+    box-sizing: border-box;
+    resize: none;
+
+    &:focus {
+        outline: none;
     }
 }
 
-@media (min-width: 380px) and (max-width: 480px) {
-    .contact-container {
-        h2 {
-            font-size: 3rem;
-        }
-        p{
-            margin: 10px 10px;
-            line-height: 1.5;
-            font-size: .9rem;
-        }
-        .get-in-touch {
-            margin-right: 25px;
-        }
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-submit {
+    border: 0;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: var(--accent);
+    background: var(--secondary);
+    text-shadow: 1px 2px 3px black;
+    box-shadow: 1px 2px 3px black;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+    &:hover {
+        background: var(--accent);
+        color: var(--whiteonly);
+    }
+
+    &:disabled {
+        background: grey;
     }
 }
 
-@media (min-width: 360px) and (max-width: 379px) {
-    .contact-container {
-        h1 {
-            font-size: 1.8rem;
-        }
-        h2 {
-            font-size: 3rem;
-        }
-        p{
-            margin: 10px 10px;
-            line-height: 1.5;
-            font-size: .9rem;
-        }
-        .get-in-touch {
-            margin-right: 25px;
-        }
+@media screen and (max-width: 768px) {
+    .contact-methods {
+        grid-template-columns: 1fr !important;
+        grid-gap: 10px !important;
+    }
+
+    .contact-methods-text {
+        font-size: 14px !important;
+    }
+
+    .title {
+        font-size: 2.5rem !important;
+    }
+
+    .subtitles {
+        font-size: 16px !important;
+    }
+
+    .fa {
+        font-size: 20px !important;
+    }
+
+    label {
+        font-size: 16px !important;
+    }
+
+    input {
+        font-size: 16px !important;
+        padding: 15px !important;
+        height: 50px !important;
+    }
+
+    textarea {
+        height: 100px !important;
+    }
+
+    .btn-submit {
+        font-size: 16px !important;
+    }
+
+    .contact-card {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 419px) {
+
+    .title {
+        font-size: 2rem !important;
+    }
+
+    .subtitles {
+        font-size: 14px !important;
+    }
+
+    .fa {
+        font-size: 16px !important;
+    }
+
+    label {
+        font-size: 14px !important;
+    }
+
+    input {
+        font-size: 14px !important;
+        padding: 15px !important;
+        height: 50px !important;
+    }
+
+    textarea {
+        height: 100px !important;
+    }
+
+    .btn-submit {
+        font-size: 16px !important;
     }
 }
