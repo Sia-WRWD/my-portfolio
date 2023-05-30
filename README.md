@@ -30,7 +30,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Material References
+## Material References & Picture References
 1. https://stackoverflow.com/questions/54468705/set-interval-on-an-array-in-angular-project (Guerric P)
 2. https://stackoverflow.com/questions/36101756/angular2-routing-with-hashtag-to-page-anchor (cheese)
 3. https://stackoverflow.com/questions/49820013/javascript-scrollintoview-smooth-scroll-and-offset (Søren D. Ptæus & Raphaël Balet)
@@ -53,4 +53,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 20. https://www.npmjs.com/package/vanilla-tilt
 21. https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css
 22. https://stackoverflow.com/questions/40242378/underline-from-left-to-right-on-hover-in-and-out
-
+23. https://www.crunchyroll.com/anime-news/2022/09/16/bocchi-the-rock-character-trailer-introduces-lead-girl-hitori-goto
+24. https://knowyourmeme.com/memes/hitori-goto-bocchi
+25. https://www.icegif.com/bocchi-the-rock-4/
+26. https://www.youtube.com/watch?v=31HfP81oWDI&ab_channel=EonIsBuffering...
+27. https://www.wallpaperflare.com/code-colorful-lights-wallpaper-cuhwc
+28. https://codepen.io/RaduBratan/pen/dyGEzay
+29. https://codepen.io/aybukeceylan/pen/RwrRPoO
+30. https://theotakuplanet.wordpress.com/2018/11/29/me/
+31. https://tenor.com/view/revive-me-jett-spray-jett-valorant-confused-trying-to-think-gif-26097763
+32. https://www.fusionexus.com/offical/
+33. https://www.crunchyroll.com/anime-feature/2023/01/04/feature-bocchi-the-rock-is-a-great-exploration-of-anxiety-and-finding-freedom-through-art
+34. https://dev.to/codesphere/should-you-really-be-coding-in-dark-mode-4ng8
+35. https://www.springboard.com/blog/software-engineering/coding-project-ideas/
+36. https://mailthis.to/
+37. https://medium.com/@babatundelamidi/build-an-angular-contact-form-and-post-data-to-email-7b7327e56ad3
