@@ -7,6 +7,8 @@
   </div>
 </section>
 
+<div scrollToTop #scrolledToShow="scrollToTop"></div>
+
 <section id="about">
   <div id="about-dark-overlay"></div>
   <div id="about-img">
@@ -39,7 +41,7 @@
   <div id="proj-img">
     <div class="proj flex-container">
       <app-projects class="flex"
-        style="flex: 1; height: auto; justify-content: center; align-items: center; position: relative; padding: 15px; flex-direction: column;"></app-projects>
+        style="flex: 1; height: auto; justify-content: center; align-items: center; position: relative; padding: 13px; flex-direction: column;"></app-projects>
     </div>
   </div>
 </section>
@@ -64,13 +66,11 @@
   </div>
 </section>
 
-<div scrollToTop #scrolledToShow="scrollToTop"></div>
-
-<mat-card class="footer">
-  <mat-card-content class="dashboard-card-content">
-    <app-footer></app-footer>
-  </mat-card-content>
-</mat-card>
+<section id="footer">
+  <div class="footer flex-container">
+    <app-footer style="flex: 1; height: auto; justify-content: center; align-items: center;"></app-footer>
+  </div>
+</section>
 
 <div id="stt" class="stt-container">
   <button mat-mini-fab (click)="scrollToTop()" class="btnStt">

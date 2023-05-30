@@ -102,12 +102,16 @@
   opacity: 0.5;
 }
 
-.dashboard-card-content {
-  text-align: center;
-}
-
 ::ng-deep .mat-card-header-text {
   margin: 0 !important;
+}
+
+#footer {
+  background: var(--secondary);
+}
+
+.footer {
+  padding: 0 !important;
 }
 
 .stt-container {
@@ -117,7 +121,15 @@
   right: 15px;
 
   .btnStt {
-    background-color: var(--secondary);
+    background-color: var(--light-slate);
+    color: var(--whiteonly);
+    transition: 0.3s ease-in-out;
+    text-shadow: 1px 2px 3px black;
+    filter: drop-shadow(1px 2px 3px black);
+
+    &:hover {
+      background: var(--accent);
+    }
 
     mat-icon {
       font-weight: 600;
