@@ -64,6 +64,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 }
 
 .project-title {
@@ -126,7 +131,7 @@
   }
 }
 
-@media (min-width: 280px) and (max-width: 359px){
+@media (min-width: 280px) and (max-width: 359px) {
   .rubber {
     font-size: 1.9rem !important;
   }
