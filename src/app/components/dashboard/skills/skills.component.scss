@@ -71,6 +71,7 @@
             padding: 10px;
             text-align: center;
             box-shadow: 1px 2px 3px black;
+            transition: 0.3s ease-in-out;
 
             img {
                 height: 45px;
@@ -91,7 +92,6 @@
             &:hover {
               transform: translateY(-10px);
               background: var(--rgb-accent-hover);
-              transition: 0.3s ease-in-out;
             }
         }
     }
