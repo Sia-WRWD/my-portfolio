@@ -21,15 +21,18 @@ export class ContactsComponent implements OnInit {
     });
   }
 
-  onSubmit(contactFormData) {
+  onSubmit() {
+    this.generateMailToLink();
+    this.contactFormData.reset();
+  }
 
-    this.contact.PostMessage(contactFormData)
-      .subscribe(response => {
-        location.href = 'https://mailthis.to/confirm'
-        console.log(response)
-      }, error => {
-        console.warn(error.responseText)
-        console.log({ error })
-      })
+  generateMailToLink() {
+    const name = encodeURIComponent(this.contactFormData.get('Name').value);
+    const email = encodeURIComponent(this.contactFormData.get('Email').value);
+    const message = encodeURIComponent(this.contactFormData.get('Message').value);
+
+    const mailtoLink = `mailto:cheezhensia24@gmail.com?subject=Inquiry%20from%20${name}&body=Dear%20Recipient,%0A%0AI%20am%20contacting%20you%20regarding:%0A%0A${message}.%0A%0AKind%20regards,%0A${name}%0A${email}`;
+
+    window.location.href = mailtoLink;
   }
 }

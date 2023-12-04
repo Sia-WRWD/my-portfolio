@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="contact-form">
-      <form [formGroup]="contactFormData" (ngSubmit)="onSubmit(contactFormData.value)">
+      <form [formGroup]="contactFormData" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="Email">Email</label><br/>
           <input type="email" class="form-control" name="email" placeholder="Your Email" formControlName="Email" /><br/>
