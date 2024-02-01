@@ -50,57 +50,58 @@
 }
 
 #intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: var(--bg);
+  // object-fit: cover;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
 }
 
-#intro-img {
-  background-image: url("../../../assets/pictures/intro/sky.jpg");
-}
+// #intro-img {
+//   background-image: url("../../../assets/pictures/intro/sky.jpg");
+// }
 
-#about-img {
-  background-image: url("../../../assets/pictures/about/sunset.jpg");
-}
+// #about-img {
+//   background-image: url("../../../assets/pictures/about/sunset.jpg");
+// }
 
-#skills-img {
-  background-image: url("../../../assets/pictures/skills/coding.jpg");
-}
+// #skills-img {
+//   background-image: url("../../../assets/pictures/skills/coding.jpg");
+// }
 
-#edu-img {
-  background-image: url("../../../assets/pictures/edu/edu.jpg");
-}
+// #edu-img {
+//   background-image: url("../../../assets/pictures/edu/edu.jpg");
+// }
 
-#exp-img {
-  background-image: url("../../../assets/pictures/exp/exp.jpg");
-}
+// #exp-img {
+//   background-image: url("../../../assets/pictures/exp/exp.jpg");
+// }
 
-#proj-img {
-  background-image: url("../../../assets/pictures/proj/proj.png");
-}
+// #proj-img {
+//   background-image: url("../../../assets/pictures/proj/proj.png");
+// }
 
-#contact-img {
-  background-image: url("../../../assets/pictures/contact/contact.jpg");
-}
+// #contact-img {
+//   background-image: url("../../../assets/pictures/contact/contact.jpg");
+// }
 
-#intro-dark-overlay {
-  height: calc(100vh - 64px);
-  background: black;   
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-}
+// #intro-dark-overlay {
+//   height: calc(100vh - 64px);
+//   background: black;   
+//   position: absolute;
+//   width: 100%;
+//   opacity: 0;
+// }
 
-#about-dark-overlay, #edu-dark-overlay,
-#proj-dark-overlay, #exp-dark-overlay,
-#contact-dark-overlay {
-  height: 100vh;
-  background: black;   
-  position: absolute;
-  width: 100%;
-  opacity: 0.5;
-}
+// #about-dark-overlay, #edu-dark-overlay,
+// #proj-dark-overlay, #exp-dark-overlay,
+// #contact-dark-overlay {
+//   height: 100vh;
+//   background: black;   
+//   position: absolute;
+//   width: 100%;
+//   opacity: 0.5;
+// }
 
 ::ng-deep .mat-card-header-text {
   margin: 0 !important;

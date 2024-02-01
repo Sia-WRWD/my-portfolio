@@ -10,7 +10,7 @@
 
   .left-content {
     .intro {
-      color: #ffffff;
+      color: var(--primary);
       font-size: 3rem;
       font-weight: 600;
       letter-spacing: 5px;
@@ -59,7 +59,7 @@
         width: 100%;
         border-right: 2px solid rgba(255,255,255,.75);
         white-space: nowrap;
-        animation: typing 4s steps(44) 1s 1 normal both,
+        animation: typing 1s steps(44) 1s normal both,
                    caret 700ms steps(44) infinite normal;
         filter: drop-shadow(1px 1px 1px black);
       }
@@ -70,6 +70,8 @@
       line-height: 1.5;
       font-weight: 600;
       margin-bottom: 0px;
+      text-shadow: 1px 2px 2px black;
+      color: var(--primary);
 
       .blast {
         display: inline-block;
@@ -105,6 +107,8 @@
         cursor: pointer;
         transition: .2s ease-in-out;
         text-shadow: 1px 1px 1px black;
+        border: 2px solid var(--about-section-border);
+        box-shadow: 1px 2px 2px black;
 
         &:hover {
           transform: translateY(10px);

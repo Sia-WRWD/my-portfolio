@@ -53,7 +53,7 @@
   &:hover {
     animation: glow 1s ease-in-out infinite alternate;
     .title {
-      color: var(--title-hover);
+      color: var(--accent);
     }
   }
 }
@@ -113,16 +113,16 @@
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px var(--title-hover), 
-    0 0 20px var(--title-hover), 
-    0 0 30px var(--title-hover), 
-    0 0 40px var(--title-hover), 
+    text-shadow: 0 0 10px var(--accent), 
+    0 0 20px var(--accent), 
+    0 0 30px var(--accent), 
+    0 0 40px var(--accent), 
   }
   
   to {
-    text-shadow: 0 0 20px var(--title-hover), 
-    0 0 30px var(--title-hover), 
-    0 0 40px var(--title-hover), 
+    text-shadow: 0 0 20px var(--accent), 
+    0 0 30px var(--accent), 
+    0 0 40px var(--accent), 
   }
 }
 

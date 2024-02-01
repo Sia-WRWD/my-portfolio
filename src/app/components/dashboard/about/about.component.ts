@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 
 @Component({
@@ -8,12 +8,25 @@ import VanillaTilt from 'vanilla-tilt';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private el: ElementRef) { }
-
-  ngOnInit(): void {
-    VanillaTilt.init(
-      this.el.nativeElement.querySelectorAll(".tilt-object"), { max: 20, speed: 150, scale: 1.05 }
-    );
+  private shouldApplyTilt(): boolean {
+    // Adjust the screen width threshold based on your definition of "mobile"
+    const mobileScreenWidth = 768;
+    console.log(window.innerWidth);
+    return window.innerWidth > mobileScreenWidth;
   }
 
+
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
+
+  ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
+    if (this.shouldApplyTilt()) {
+      VanillaTilt.init(
+        this.el.nativeElement.querySelectorAll('.tilt-object'),
+        { max: 20, speed: 150, scale: 1.05 }
+      );
+    }
+  }
 }

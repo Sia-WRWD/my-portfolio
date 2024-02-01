@@ -8,11 +8,12 @@
   --slate: #8892b0;
   --typing-primary: #fafafa;
   --dominant: #FFF;
-  --secondary: #3F51B5;
+  --primary: #fff;
+  --secondary: #2A36A3;
   --accent: #EB5D63;
   --rgb-accent: rgb(235, 93, 99, 0.7);
   --rgb-accent-hover: rgb(235, 93, 99, 1);
-  --no-blast-color: #3F51B5;
+  --no-blast-color: #EB5D63;
   --wave-border: #FFF;
   --white2black: white;
   --black2white: black;
@@ -26,6 +27,8 @@
   --title-hover: #FFC05C;
   --slide-top: slide_up 1.5s ease;
   --sidenav-si-bg: #3F51B5;
+  --about-section-border: transparent;
+  --bg: #3F51B5;
 }
 
 @import '@angular/material/theming';
@@ -58,12 +61,13 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   @include angular-material-theme($dark-theme);
   --slate: #fff;
   --typing-primary: #303030;
-  --dominant: #303030;
-  --secondary: #9e9e9e; 
+  --dominant: #fff;
+  --primary: #fff;
+  --secondary: #0a192f; 
   --accent: aqua;
   --rgb-accent: rgb(0, 255, 255, 0.7);
   --rgb-accent-hover: rgb(0, 255, 255, 1);
-  --no-blast-color: #9e9e9e;
+  --no-blast-color: aqua;
   --wave-border: #303030;
   --white2black: black;
   --black2white: #fff;
@@ -75,16 +79,19 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   --lang-used: aqua;
   --title-hover: #FFC05C;
   --sidenav-si-bg: #424242;
+  --about-section-border: aqua;
+  --bg: #112240;
 }
 
 .bocchi-theme {
   --typing-primary: #fafafa;
   --dominant: #FFF;
-  --secondary: #E59BAC;
+  --primary: #fff;
+  --secondary: #cb416b;
   --accent: #EF5D8A;
   --rgb-accent: rgb(239, 93, 138, 0.7);
   --rgb-accent: rgb(239, 93, 138, 1);
-  --no-blast-color: #E59BAC;
+  --no-blast-color: #EF5D8A;
   --wave-border: #FFF;
   --white2black: white;
   --black2white: black;
@@ -98,6 +105,8 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   --title-hover: #FFC05C;
   --slide-top: slide_up 1.5s ease;
   --sidenav-si-bg: #E59BAC;
+  --about-section-border: transparent;
+  --bg: #E59BAC;
 }
 
 /* You can add global styles to this file, and also import other style files */

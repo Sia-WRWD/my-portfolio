@@ -60,56 +60,7 @@ export class NavigationComponent {
         classes.add(bocchiThemeClass);
         classes.remove(darkModeClass);
       }
-
-      this.changeBackgroundImage(val);
-      this.changeOverlayVisibility(val);
     })
-  }
-
-  changeBackgroundImage(val: string) {
-    var introBg = document.getElementById("intro-img");
-    var aboutBg = document.getElementById("about-img");
-    var skillBg = document.getElementById("skills-img");
-    var eduBg = document.getElementById("edu-img");
-    var projBg = document.getElementById("proj-img");
-    var expBg = document.getElementById("exp-img");
-    var cntBg = document.getElementById("contact-img");
-
-    if (val == "") {
-      introBg.style.backgroundImage = "url('../../../assets/pictures/intro/sky.jpg')";
-      aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/sunset.jpg')";
-      skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding.jpg')";
-      eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/edu.jpg')";
-      projBg.style.backgroundImage = "url('../../../assets/pictures/proj/proj.png')";
-      expBg.style.backgroundImage = "url('../../../assets/pictures/exp/exp.jpg')";
-      cntBg.style.backgroundImage = "url('../../../assets/pictures/contact/contact.jpg')";
-    } else if (val == "Dark Theme") {
-      introBg.style.backgroundImage = "url('../../../assets/pictures/intro/galaxy.jpg')";
-      aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/night-sky.jpg')";
-      skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/dark-coding.jpg')";
-      eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/dark-edu.jpg')";
-      projBg.style.backgroundImage = "url('../../../assets/pictures/proj/proj-dark.jpg')";
-      expBg.style.backgroundImage = "url('../../../assets/pictures/exp/dark-exp.jpg')";
-      cntBg.style.backgroundImage = "url('../../../assets/pictures/contact/contact-dark.jpg')";
-    } else {
-      introBg.style.backgroundImage = "url('../../../assets/pictures/intro/bocchi-scared.jpg')";
-      aboutBg.style.backgroundImage = "url('../../../assets/pictures/about/bocchi-happy.png')";
-      skillBg.style.backgroundImage = "url('../../../assets/pictures/skills/coding-anime.jpg')";
-      eduBg.style.backgroundImage = "url('../../../assets/pictures/edu/bocchi-edu.png')";
-      projBg.style.backgroundImage = "url('../../../assets/pictures/proj/proj-bocchi.jpg')";
-      expBg.style.backgroundImage = "url('../../../assets/pictures/exp/bocchi-exp.jpg')";
-      cntBg.style.backgroundImage = "url('../../../assets/pictures/contact/contact-anime.jpg')";
-    }
-  }
-
-  changeOverlayVisibility(val: string) {
-    var overlay = document.getElementById("intro-dark-overlay");
-
-    if (val == "") {
-      overlay.style.opacity = "0";
-    } else {
-      overlay.style.opacity = "0.5";
-    }
   }
 
   closeSidebar() {

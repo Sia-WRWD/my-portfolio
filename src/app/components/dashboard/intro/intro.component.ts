@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 
 @Component({
@@ -7,6 +7,7 @@ import VanillaTilt from 'vanilla-tilt';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
+  @ViewChild('typing') typingElement: ElementRef | undefined;
 
   items = [
     "Hello, my name is",
@@ -27,7 +28,13 @@ export class IntroComponent implements OnInit {
   private pointer: number = 0;
   private rolePointer: number = 0;
 
-  constructor(private el: ElementRef) { }
+  private shouldApplyTilt(): boolean {
+    // Adjust the screen width threshold based on your definition of "mobile"
+    const mobileScreenWidth = 768;
+    return window.innerWidth > mobileScreenWidth;
+  }
+
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.currentItem = this.items[0];
@@ -35,10 +42,31 @@ export class IntroComponent implements OnInit {
     this.changeText();
     this.changeRole();
     this.applySlideTop();
-    VanillaTilt.init(
-      this.el.nativeElement.querySelectorAll(".tilt-object"), { max: 20, speed: 150, scale: 1.05 }
-    );
   }
+
+  ngAfterViewInit() {
+    if (this.typingElement) {
+      this.typingElement.nativeElement.addEventListener('animationend', this.animationEndHandler);
+    }
+
+    if (this.shouldApplyTilt()) {
+      VanillaTilt.init(
+        this.el.nativeElement.querySelectorAll('.tilt-object'),
+        { max: 20, speed: 150, scale: 1.05 }
+      );
+    }
+  }
+
+  animationEndHandler = (event: AnimationEvent) => {
+    if (event.animationName.includes('typing')) {
+      // Set the final style after the animation is complete
+      if (this.typingElement) {
+        setTimeout(() => {
+          this.typingElement.nativeElement.style.borderRight = '0px';
+        }, 2000);
+      }
+    }
+  };
 
   changeText() {
     this.interval = setInterval(() => {
@@ -65,7 +93,7 @@ export class IntroComponent implements OnInit {
   directAbout() {
     let x = document.querySelector("#about");
     if (x) {
-      x.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      x.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }
   }
 
