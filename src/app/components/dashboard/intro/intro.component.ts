@@ -1,10 +1,11 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, ViewEncapsulation  } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss']
+  styleUrls: ['./intro.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class IntroComponent implements OnInit {
   @ViewChild('typing') typingElement: ElementRef | undefined;
