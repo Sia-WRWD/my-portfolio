@@ -609,3 +609,11 @@
     border-right-color: transparent;
   }
 }
+
+@-webkit-keyframes caret {
+  from{
+    border-right-color: rgba(255,255,255,.75);
+  } to {
+    border-right-color: transparent;
+  }
+}

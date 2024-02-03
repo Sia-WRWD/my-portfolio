@@ -11,7 +11,6 @@ export class AboutComponent implements OnInit {
   private shouldApplyTilt(): boolean {
     // Adjust the screen width threshold based on your definition of "mobile"
     const mobileScreenWidth = 768;
-    console.log(window.innerWidth);
     return window.innerWidth > mobileScreenWidth;
   }
 

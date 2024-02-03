@@ -5,6 +5,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { UntypedFormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { MatSidenav } from '@angular/material/sidenav';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-navigation',
@@ -30,6 +31,7 @@ export class NavigationComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private overlayContainer: OverlayContainer,
+    private themeService: ThemeService
   ) { }
 
   ngOnInit(): void {
@@ -37,30 +39,31 @@ export class NavigationComponent {
   }
 
   changeTheme() {
+    // Check if the user prefers dark mode
+    const prefersDarkMode = this.themeService.isDarkMode();
+    // console.log(prefersDarkMode);
+
     this.toggleControl.valueChanges.subscribe(val => {
       const darkModeClass = 'unicorn-dark-theme';
       const bocchiThemeClass = 'bocchi-theme';
-      if (val == "") {
-        this.className = "";
-      } else if (val == "Dark Theme") {
-        this.className = darkModeClass;
-      } else {
-        this.className = bocchiThemeClass
-      }
 
+      // Map the value of val to the corresponding class
+      const selectedClass = val === 'Dark Theme' ? darkModeClass : val === '' ? '' : bocchiThemeClass;
+
+      // Update this.className
+      this.className = selectedClass;
+
+      // Update classes on overlayContainer
       const classes = this.overlayContainer.getContainerElement().classList;
-      if (val == "") {
-        this.className = "";
-        classes.remove(darkModeClass);
-        classes.remove(bocchiThemeClass);
-      } else if (val == "Dark Theme") {
-        classes.add(darkModeClass);
-        classes.remove(bocchiThemeClass);
-      } else {
-        classes.add(bocchiThemeClass);
-        classes.remove(darkModeClass);
+      classes.remove(darkModeClass, bocchiThemeClass);
+      if (selectedClass !== '') {
+        classes.add(selectedClass);
       }
-    })
+    });
+
+    if (prefersDarkMode === true) {
+      this.toggleControl.setValue(prefersDarkMode ? 'Dark Theme' : '');
+    }
   }
 
   closeSidebar() {
