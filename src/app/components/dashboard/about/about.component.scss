@@ -39,53 +39,6 @@
         flex: .6;
         flex-direction: column;
 
-        .about-title {
-
-            .rubber {
-                font-weight: 800;
-                font-size: 3rem;
-                line-height: 1.25;
-                margin-bottom: 10px;
-                filter: drop-shadow(1px 1px 1px black);
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: 1px;
-                    width: 27%;
-                    border-bottom: 5px solid var(--accent);
-                }
-
-                .no-blast-s {
-                    color: var(--no-blast-color);
-                }
-
-                .no-blast {
-                    margin-left: 15px;
-                    color: var(--no-blast-color);
-                }
-
-                .blast {
-                    display: inline-block;
-                    animation-duration: 1s;
-                    animation-fill-mode: both;
-                    animation-iteration-count: 1;
-                    background: linear-gradient(to right, var(--light-slate) 50%, var(--accent) 50%);
-                    background-size: 200%;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    transition: 0.4s ease-out;
-
-                    &:hover {
-                        background-position: -100%;
-                        animation-name: rubberBand;
-                    }
-                }
-            }
-        }
-
         .right-about-content {
 
             .right-about-content-header {
@@ -325,7 +278,7 @@
     }
 
     .rubber {
-        font-size: 2.6rem !important;
+        //font-size: 2.6rem !important;
     }
 
     .right-content {
@@ -367,7 +320,7 @@
     }
 
     .rubber {
-        font-size: 1.95rem !important;
+        //font-size: 1.95rem !important;
     }
 
     .right-content {
@@ -409,7 +362,7 @@
     }
 
     .rubber {
-        font-size: 1.95rem !important;
+        //font-size: 1.95rem !important;
     }
 
     .right-content {
@@ -451,7 +404,7 @@
     }
 
     .rubber {
-        font-size: 1.8rem !important;
+        //font-size: 1.8rem !important;
 
         &::before {
             width: 35% !important;
@@ -497,7 +450,7 @@
     }
 
     .rubber {
-        font-size: 1.8rem !important;
+        //font-size: 1.8rem !important;
 
         &::before {
             width: 40% !important;
@@ -689,7 +642,7 @@
     }
 
     .rubber {
-        font-size: 1.8rem !important;
+        //font-size: 1.8rem !important;
 
         &::before {
             width: 40% !important;
@@ -734,7 +687,6 @@
     }
 
     .rubber {
-        font-size: 1.8rem !important;
 
         &::before {
             width: 50% !important;
