@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared.module';
 import { DashBoardModule } from './components/dashboard/dashboard.module';
-import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -28,7 +27,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule,
     DashBoardModule,
-    NgxHideOnScrollModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
