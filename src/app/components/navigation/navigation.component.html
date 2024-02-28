@@ -5,12 +5,12 @@
       Sia's Portfolio &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item (click)="directAbout()"> About</a>
-      <a mat-list-item (click)="directSkills()"> Skills</a>
-      <a mat-list-item (click)="directEdu()"> Education</a>
-      <a mat-list-item (click)="directProj()"> Projects</a>
-      <a mat-list-item (click)="directExp()"> Experience</a>
-      <a mat-list-item (click)="directContact()"> Contact</a>
+      <a mat-list-item (click)="directAbout()"> ABOUT</a>
+      <a mat-list-item (click)="directSkills()"> SKILLS</a>
+      <a mat-list-item (click)="directEdu()"> EDUCATION</a>
+      <a mat-list-item (click)="directProj()"> PROJECTS</a>
+      <a mat-list-item (click)="directExp()"> EXPERIENCE</a>
+      <a mat-list-item (click)="directContact()"> CONTACT</a>
       <a mat-list-item href="../../../assets/RESUME.pdf" download="RESUME.pdf">
         Resume
       </a>
@@ -42,12 +42,12 @@
         </div>
         <div class="flex-stretch"></div>
         <div class="nav-bar-a-list">
-          <a (click)="directAbout()">About</a>
-          <a (click)="directSkills()">Skills</a>
-          <a (click)="directEdu()">Education</a>
-          <a (click)="directProj()">Projects</a>
-          <a (click)="directExp()">Experience</a>
-          <a (click)="directContact()">Contact</a>
+          <a (click)="directAbout()" data-value="ABOUT"  (mouseenter)="onMouseEnter($event)">ABOUT</a>
+          <a (click)="directSkills()" data-value="SKILLS" (mouseenter)="onMouseEnter($event)">SKILLS</a>
+          <a (click)="directEdu()" data-value="EDUCATION" (mouseenter)="onMouseEnter($event)">EDUCATION</a>
+          <a (click)="directProj()" data-value="PROJECTS" (mouseenter)="onMouseEnter($event)">PROJECTS</a>
+          <a (click)="directExp()" data-value="EXPERIENCE" (mouseenter)="onMouseEnter($event)">EXPERIENCE</a>
+          <a (click)="directContact()" data-value="CONTACT" (mouseenter)="onMouseEnter($event)">CONTACT</a>
         </div>
         <button type="button" mat-icon-button [matMenuTriggerFor]="themeMenu" class="theme-btn">
           <mat-icon aria-label="Select theme" style="text-shadow: 1px 1px 1px black;">format_color_fill</mat-icon>

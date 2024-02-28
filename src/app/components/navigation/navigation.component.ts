@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostBinding, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -13,6 +13,13 @@ import { ThemeService } from './theme.service';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+
+  @ViewChild('about', { static: true }) aboutLink!: ElementRef;
+  @ViewChild('skills', { static: true }) skillsLink!: ElementRef;
+  @ViewChild('education', { static: true }) educationLink!: ElementRef;
+  @ViewChild('projects', { static: true }) projectsLink!: ElementRef;
+  @ViewChild('experience', { static: true }) experienceLink!: ElementRef;
+  @ViewChild('contact', { static: true }) contactLink!: ElementRef;
 
   @HostBinding('class') className = '';
   toggleControl = new UntypedFormControl("");
@@ -36,6 +43,33 @@ export class NavigationComponent {
 
   ngOnInit(): void {
     this.changeTheme();
+  }
+
+  onMouseEnter(event: MouseEvent) {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let interval = null;
+    const target = event.target as HTMLElement;
+    let iteration = 0;
+
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+      target.innerText = target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iteration) {
+            return target.dataset['value'][index];
+          }
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+
+      if (iteration >= target.dataset['value'].length) {
+        clearInterval(interval);
+      }
+
+      iteration += 1 / 3;
+    }, 30);
   }
 
   changeTheme() {
