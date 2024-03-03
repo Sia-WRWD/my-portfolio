@@ -42,7 +42,7 @@ export class IntroComponent implements OnInit {
     this.currentRole = this.roles[0];
     this.changeText();
     this.changeRole();
-    this.applySlideTop();
+    this.applySlidingAnimations();
   }
 
   ngAfterViewInit() {
@@ -85,10 +85,14 @@ export class IntroComponent implements OnInit {
     }, 3000)
   }
 
-  applySlideTop() {
-    var x = document.getElementById("showSlide");
+  applySlidingAnimations() {
+    var x = document.getElementById("showSlideUp");
     x.classList.remove("hide");
     x.classList.add("slideTop");
+
+    var x = document.getElementById("showSlideDown");
+    x.classList.remove("hide");
+    x.classList.add("slideBottom");
   }
 
   directAbout() {

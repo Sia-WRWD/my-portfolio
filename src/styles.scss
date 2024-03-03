@@ -26,6 +26,7 @@
   --lang-used: lightgrey;
   --title-hover: #FFC05C;
   --slide-top: slide_up 1.5s ease;
+  --slide-bottom: slide_down 1.5s ease;
   --sidenav-si-bg: #3F51B5;
   --about-section-border: transparent;
   --bg: #3F51B5;
@@ -152,6 +153,12 @@ h4 {
   opacity: 1;
 }
 
+.slideBottom {
+  animation: var(--slide-bottom);
+  transition: opacity 1s;
+  opacity: 1;
+}
+
 .fadeInOut {
   animation: fadeInOut 3s linear infinite;
   opacity: 0;
@@ -204,6 +211,17 @@ h4 {
   0%{
     opacity: 0.2;
     transform:translateY(120px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide_down{
+  0%{
+    opacity: 0.2;
+    transform:translateY(-120px);
   }
   100%{
     opacity: 1;
