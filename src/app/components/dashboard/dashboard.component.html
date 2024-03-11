@@ -2,23 +2,24 @@
   <div id="intro-dark-overlay"></div>
   <div id="intro-img">
     <mat-card class="flex-container intro">
-      <app-intro class="flex" style="flex: 1; justify-content: center;"></app-intro>
+      <app-intro class="flex"
+        style="flex: 1; justify-content: center; height: auto; margin-top: 80px; margin-bottom: 80px;"></app-intro>
     </mat-card>
   </div>
 </section>
 
 <div scrollToTop #scrolledToShow="scrollToTop"></div>
 
-<section id="about">
+<section id="about" style="scroll-margin: 125px;">
   <div id="about-img">
     <mat-card class="flex-container about">
       <app-about class="flex"
-        style="flex: 1; justify-content: space-around; height: 100vh; align-items: center;"></app-about>
+        style="flex: 1; justify-content: space-around; height: auto; align-items: center;"></app-about>
     </mat-card>
   </div>
 </section>
 
-<section id="skills">
+<section id="skills" style="scroll-margin: 75px;">
   <div id="skills-img">
     <mat-card class="flex-container skills">
       <app-skills class="flex" style="flex: 1; justify-content: space-around; height: auto;"></app-skills>
@@ -26,24 +27,25 @@
   </div>
 </section>
 
-<section id="edu">
+<section id="edu" style="scroll-margin: 75px;">
   <div id="edu-img">
     <mat-card class="flex-container edu">
-      <app-education class="flex" style="flex: 1; height: 100vh; justify-content: center;"></app-education>
+      <app-education class="flex" style="flex: 1; height: auto; justify-content: center;"></app-education>
     </mat-card>
   </div>
 </section>
 
-<section id="proj">
+<section id="proj" style="scroll-margin: 75px;">
   <div id="proj-img">
     <div class="proj flex-container">
-      <app-projects class="flex"
-        style="flex: 1; height: auto; justify-content: center; align-items: center; position: relative; padding: 13px; flex-direction: column;"></app-projects>
+      <app-projects class="flex" style="flex: 1; height: auto; justify-content: center; align-items: center; 
+        position: relative; padding: 13px; flex-direction: column; margin-bottom: 80x;">
+      </app-projects>
     </div>
   </div>
 </section>
 
-<section id="exp">
+<section id="exp" style="scroll-margin: 75px;">
   <div id="exp-img">
     <div class="exp flex-container">
       <app-work-exp class="flex"
@@ -52,18 +54,20 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" style="scroll-margin: 75px;">
   <div id="contact-img">
     <div class="contact flex-container">
       <app-contacts class="flex"
-        style="flex: 1; height: auto; justify-content: center; align-items: center; padding: 15px;"></app-contacts>
+        style="flex: 1; height: auto; justify-content: center; align-items: center; padding: 15px; margin-bottom: 80x;">
+      </app-contacts>
     </div>
   </div>
 </section>
 
 <section id="footer">
   <div class="footer flex-container">
-    <app-footer style="flex: 1; height: auto; justify-content: center; align-items: center;"></app-footer>
+    <app-footer style="flex: 1; height: auto; justify-content: center; align-items: center; margin-bottom: 80x;">
+    </app-footer>
   </div>
 </section>
 

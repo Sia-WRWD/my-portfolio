@@ -16,74 +16,21 @@
   box-shadow: none;
 }
 
-.skills, .about, .edu {
+.skills, .about, .edu, .proj, .contact, .intro, .exp {
   display: flex;
-  height: 100vh;
+  height: auto !important;
   width: 100%;
   align-items: center;
-}
-
-.proj, .contact {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  padding: 0 !important;
 }
 
 .intro {
-  display: flex;
-  height: calc(100vh - 64px);
-  width: 100%;
   margin-top: 64px;
   align-items: center;
 }
 
-.exp {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 0 !important;
-}
-
 #intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
   background: var(--bg);
-  // object-fit: cover;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
 }
-
-// #intro-img {
-//   background-image: url("../../../assets/pictures/intro/sky.jpg");
-// }
-
-// #about-img {
-//   background-image: url("../../../assets/pictures/about/sunset.jpg");
-// }
-
-// #skills-img {
-//   background-image: url("../../../assets/pictures/skills/coding.jpg");
-// }
-
-// #edu-img {
-//   background-image: url("../../../assets/pictures/edu/edu.jpg");
-// }
-
-// #exp-img {
-//   background-image: url("../../../assets/pictures/exp/exp.jpg");
-// }
-
-// #proj-img {
-//   background-image: url("../../../assets/pictures/proj/proj.png");
-// }
-
-// #contact-img {
-//   background-image: url("../../../assets/pictures/contact/contact.jpg");
-// }
 
 // #intro-dark-overlay {
 //   height: calc(100vh - 64px);
