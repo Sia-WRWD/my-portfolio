@@ -32,6 +32,7 @@
       filter: drop-shadow(2px 4px 6px black) sepia();
       transition: 0.3s ease-in-out;
       display: flex;
+      padding: 100px 0;
 
       &:after {
         content: "";
@@ -46,7 +47,7 @@
       }
 
       .edu-container-card-content {
-        padding: 100px 30px;
+        padding: 0 30px;
         color: white;
         text-shadow: 1px 2px 3px black;
         display: flex;
@@ -79,29 +80,31 @@
             overflow: hidden;
             transition: 0.3s ease-in-out;
 
-           &:after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            right: 0;
-            width: 0;
-            bottom: -5px;
-            background: var(--accent);
-            height: 4px;
-            transition-property: width;
-            transition-duration: 0.3s;
-            transition-timing-function: ease-out;
-           }
+            &:after {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              right: 0;
+              width: 0;
+              bottom: -5px;
+              background: var(--accent);
+              height: 4px;
+              transition-property: width;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-out;
+            }
 
-           &:hover:after, :focus:after, :active:after {
-            left: 0;
-            right: auto;
-            width: 100%;
-           }
+            &:hover:after,
+            :focus:after,
+            :active:after {
+              left: 0;
+              right: auto;
+              width: 100%;
+            }
 
-           &:hover {
-            color: var(--accent);
-           }
+            &:hover {
+              color: var(--accent);
+            }
           }
         }
 
@@ -121,53 +124,53 @@
 
 @media (min-width: 280px) {
   .flex-container {
-      max-width: 270px !important;
+    max-width: 270px !important;
   }
 }
 
 @media (min-width: 360px) {
   .flex-container {
-      max-width: 340px !important;
+    max-width: 340px !important;
   }
 }
 
 @media (min-width: 420px) {
   .flex-container {
-      max-width: 400px !important;
+    max-width: 400px !important;
   }
 }
 
 @media (min-width: 576px) {
   .flex-container {
-      max-width: 540px !important;
+    max-width: 540px !important;
   }
 }
 
 @media (min-width: 768px) {
   .flex-container {
-      max-width: 720px !important;
+    max-width: 720px !important;
   }
 }
 
 @media (min-width: 992px) {
   .flex-container {
-      max-width: 960px !important;
+    max-width: 960px !important;
   }
 }
 
 @media (min-width: 1200px) {
   .flex-container {
-      max-width: 1140px !important;
+    max-width: 1140px !important;
   }
 }
 
 @media (min-width: 1430px) {
   .flex-container {
-      max-width: 1400px !important;
+    max-width: 1400px !important;
   }
 }
 
-@media (min-width: 280px) and (max-width: 1199px) {
+@media (min-width: 280px) and (max-width: 1200px) {
   .edu-content {
     flex-direction: column !important;
     row-gap: 15px !important;
@@ -179,7 +182,11 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
+  .edu-container-card {
+    padding: 75px 0 !important;
+  }
+
   .edu-container-card-course {
     font-size: 2.25rem !important;
   }
@@ -193,7 +200,12 @@
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .edu-container-card {
+    padding: 50px 0 !important;
+  }
+
   .edu-container-card-course {
     font-size: 1.9rem !important;
   }
@@ -205,13 +217,25 @@
   .edu-container-card-year-status {
     font-size: 1.1rem !important;
   }
-  
+
   .edu-content {
     margin-top: 15px !important;
   }
 }
 
-@media (min-width: 420px) and (max-width: 575px) {
+@media (min-width: 420px) and (max-width: 576px) {
+  .edu-container-card {
+    padding: 50px 0 !important;
+  }
+
+  .card-grid-container {
+    grid-template-columns: repeat(2, minmax(18em, 1fr)) !important;
+  }
+
+  .edu-container-card {
+    padding: 50px 0 !important;
+  }
+
   .edu-container-card-course {
     font-size: 1.75rem !important;
   }
@@ -229,7 +253,11 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 419px) {
+@media (min-width: 360px) and (max-width: 420px) {
+  .edu-container-card {
+    padding: 50px 0 !important;
+  }
+
   .edu-container-card-course {
     font-size: 1.5rem !important;
   }
@@ -251,7 +279,11 @@
   }
 }
 
-@media (min-width: 280px) and (max-width: 359px) {
+@media (min-width: 280px) and (max-width: 360px) {
+  .edu-container-card {
+    padding: 50px 0 !important;
+  }
+
   .edu-container-card-course {
     font-size: 1.25rem !important;
   }
@@ -293,5 +325,11 @@
   .edu-content {
     margin-top: 0px !important;
     width: 100%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 992px) {
+  .card-grid-container {
+    grid-template-columns: repeat(2, minmax(18em, 1fr)) !important;
   }
 }
