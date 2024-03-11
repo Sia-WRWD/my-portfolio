@@ -258,20 +258,14 @@ img {
   }
 }
 
-@media (min-width: 280px) {
+@media (min-width: 360px) and (max-width: 419px) {
   .rubber {
-    font-size: 1.75rem !important;
+    font-size: 2.3rem !important;
   }
 }
 
-@media (min-width: 360px) {
-    .rubber {
-      font-size: 3rem !important;
-    }
+@media (min-width: 280px) and (max-width: 359px) {
+  .rubber {
+    font-size: 1.9rem !important;
   }
-  
-  @media (min-width: 576px) {
-    .rubber {
-      font-size: 3rem !important;
-    }
-  }
+}
