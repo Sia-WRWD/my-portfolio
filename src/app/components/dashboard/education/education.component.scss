@@ -327,9 +327,3 @@
     width: 100%;
   }
 }
-
-@media (min-width: 280px) and (max-width: 992px) {
-  .card-grid-container {
-    grid-template-columns: repeat(2, minmax(18em, 1fr)) !important;
-  }
-}
