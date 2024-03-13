@@ -1,4 +1,4 @@
-.dashboard-flex-container {
+.flex-container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -27,13 +27,13 @@
   align-items: center;
 }
 
-#intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
-  background: var(--bg);
-}
-
 .intro-margin {
   margin-top: 132px; 
   margin-bottom: 132px;
+}
+
+#intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
+  background: var(--bg);
 }
 
 // #intro-dark-overlay {
@@ -104,7 +104,7 @@
   .intro {
     align-items: unset !important;
   }
-  
+
   .intro-margin {
     margin-top: 100px !important; 
     margin-bottom: 100px !important;
