@@ -1,4 +1,4 @@
-.flex-container {
+.dashboard-flex-container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -25,12 +25,15 @@
 
 .intro {
   align-items: center;
-  margin-top: 132px; 
-  margin-bottom: 132px;
 }
 
 #intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
   background: var(--bg);
+}
+
+.intro-margin {
+  margin-top: 132px; 
+  margin-bottom: 132px;
 }
 
 // #intro-dark-overlay {
@@ -100,6 +103,9 @@
 @media (max-width: 992px) {
   .intro {
     align-items: unset !important;
+  }
+
+  .intro-margin {
     margin-top: 100px !important; 
     margin-bottom: 100px !important;
   }
