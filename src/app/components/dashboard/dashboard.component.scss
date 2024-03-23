@@ -1,7 +1,5 @@
 .flex-container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -25,6 +23,16 @@
 
 .intro {
   align-items: center;
+}
+
+.intro-margin {
+  margin-top: 132px !important; 
+  margin-bottom: 132px !important;
+}
+
+
+.m-80 {
+  margin-bottom: 80px !important;  
 }
 
 #intro-img, #about-img, #skills-img, #edu-img, #proj-img, #exp-img, #contact-img {
@@ -95,52 +103,18 @@
   }
 }
 
-//Responsive
-@media (min-width: 360px) {
-  .flex-container {
-    max-width: 340px !important;
-  }
-}
-
-@media (min-width: 420px) {
-  .flex-container {
-    max-width: 400px !important;
-  }
-}
-
-@media (min-width: 576px) {
-  .flex-container {
-    max-width: 540px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .flex-container {
-    max-width: 720px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .flex-container {
-    max-width: 960px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .flex-container {
-    max-width: 1140px !important;
-  }
-}
-
-@media (min-width: 1430px) {
-  .flex-container {
-    max-width: 1400px !important;
-  }
-}
-
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .intro {
     align-items: unset !important;
+  }
+
+  .intro-margin {
+    margin-top: 100px !important; 
+    margin-bottom: 100px !important;
+  }
+
+  .m-80 {
+      margin-bottom: 30px !important;  
   }
 
   .proj, .contact {
