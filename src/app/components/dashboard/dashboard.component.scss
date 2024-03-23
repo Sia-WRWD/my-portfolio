@@ -26,8 +26,7 @@
 }
 
 .intro-margin {
-  margin-top: 132px !important; 
-  margin-bottom: 132px !important;
+  height: 100vh;
 }
 
 
@@ -109,6 +108,7 @@
   }
 
   .intro-margin {
+    height: auto !important;
     margin-top: 100px !important; 
     margin-bottom: 100px !important;
   }
